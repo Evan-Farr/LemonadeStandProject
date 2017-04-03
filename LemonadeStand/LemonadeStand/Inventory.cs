@@ -11,12 +11,14 @@ namespace LemonadeStand
         public List<Lemon> lemons;
         public List<Sugar> sugar;
         public List<Ice> ice;
+        public List<Cup> cups;
 
         public Inventory()
         {
             lemons = new List<Lemon>();
             sugar = new List<Sugar>();
             ice = new List<Ice>();
+            cups = new List<Cup>();
         }
 
         public void RemoveLemons(int amount)
