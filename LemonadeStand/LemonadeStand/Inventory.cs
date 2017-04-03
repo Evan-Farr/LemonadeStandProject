@@ -28,11 +28,56 @@ namespace LemonadeStand
                 lemons.RemoveAt(0);
             }
         }
-        public void AddLemons(int amount)
+        public void AddLemon(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                lemons.Add(new Lemon(.25, 1));
+                lemons.Add(new Lemon(.15, 1));
+            }
+        }
+
+        public void RemoveSugar(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                sugar.RemoveAt(0);
+            }
+        }
+        public void AddSugar(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                sugar.Add(new Sugar(.20, 1));
+            }
+        }
+
+        public void RemoveIce(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                ice.RemoveAt(0);
+            }
+        }
+        public void AddIce(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                ice.Add(new Ice(.05, 1));
+            }
+        }
+
+        public void RemoveCups(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                cups.RemoveAt(0);
+            }
+        }
+        public void AddCups(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                cups.Add(new Cup(.5, 1));
             }
         }
 

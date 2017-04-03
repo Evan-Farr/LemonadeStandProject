@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     class Store
     {
-        Inventory inventory;
+        public Inventory inventory;
         public double budget;
 
         public Store()
