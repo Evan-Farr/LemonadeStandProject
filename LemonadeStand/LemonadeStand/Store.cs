@@ -8,5 +8,17 @@ namespace LemonadeStand
 {
     class Store
     {
+        Inventory inventory;
+        public double budget;
+
+        public Store()
+        {
+            inventory = new Inventory();
+        }
+
+        public void SellLemonade(Customer customer)
+        {
+
+        }
     }
 }
