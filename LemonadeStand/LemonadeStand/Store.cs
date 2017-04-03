@@ -12,11 +12,7 @@ namespace LemonadeStand
         public double budget;
         public int dailySales;
         public int runningSales;
-        public double profit;
-        public double loss;
-        public double runningProfitLoss;
         
-
         public Store()
         {
             inventory = new Inventory();
