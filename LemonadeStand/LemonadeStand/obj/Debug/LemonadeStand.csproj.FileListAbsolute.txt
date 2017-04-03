@@ -1,1 +1,2 @@
 C:\Users\EvanC\Documents\GitHub\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\EvanC\Documents\GitHub\LemonadeStandProject\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
