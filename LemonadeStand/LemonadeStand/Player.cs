@@ -9,13 +9,11 @@ namespace LemonadeStand
     class Player
     {
         public string name;
-        public double budget;
         public Store store;
 
         public Player(string Name)
         {
             name = Name;
-            budget = 200;
             store = new Store();
         }
     }
