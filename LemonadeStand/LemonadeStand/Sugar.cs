@@ -8,11 +8,11 @@ namespace LemonadeStand
 {
     public class Sugar : Product
     {
-        public Sugar(double Price, int Quanity)
+        public Sugar()
         {
-            type = "sugar";
-            price = Price;
-            quanity = Quanity;
+            type = "sugar cube";
+            price = .75;
+            shelfLife = 5;
         }
     }
 }

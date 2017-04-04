@@ -8,5 +8,12 @@ namespace LemonadeStand
 {
     public class Day
     {
+        public Weather weather;
+        public int dayCount;
+
+        public Day()
+        {
+
+        }
     }
 }

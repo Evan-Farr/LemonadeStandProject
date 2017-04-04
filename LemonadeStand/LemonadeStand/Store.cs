@@ -9,9 +9,9 @@ namespace LemonadeStand
     public class Store
     {
         public Inventory inventory;
-        public double budget;
-        public int dailySales;
-        public int runningSales;
+        private double budget;
+        public double dailySales;
+        public double runningSales;
         
         public Store()
         {

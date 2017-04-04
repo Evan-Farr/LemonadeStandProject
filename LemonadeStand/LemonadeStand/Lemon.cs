@@ -8,11 +8,11 @@ namespace LemonadeStand
 {
     public class Lemon : Product
     {
-        public Lemon(double Price, int Quanity)
+        public Lemon()
         {
             type = "lemon(s)";
-            price = Price;
-            quanity = Quanity;
+            price = 1.50;
+            shelfLife = 3;
         }
     }
 }

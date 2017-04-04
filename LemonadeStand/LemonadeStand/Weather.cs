@@ -8,5 +8,13 @@ namespace LemonadeStand
 {
     public class Weather
     {
+        public string skyCover;
+        public int temperature;
+
+        public Weather()
+        {
+
+        }
+        
     }
 }
