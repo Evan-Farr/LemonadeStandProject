@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
         public List<Lemon> lemons;
         public List<Sugar> sugar;
@@ -77,7 +77,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                cups.Add(new Cup(.5, 1));
+                cups.Add(new Cup(.5));
             }
         }
 

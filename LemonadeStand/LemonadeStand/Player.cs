@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    public class Player
     {
         public string name;
         public Store store;
+        private double currentScore;
+        private double highScore;
 
         public Player(string Name)
         {

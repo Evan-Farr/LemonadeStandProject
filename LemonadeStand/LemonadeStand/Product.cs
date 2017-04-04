@@ -11,6 +11,7 @@ namespace LemonadeStand
         public string type;
         public double price;
         public int quanity;
+        public int shelfLife;
 
         public Product()
         {

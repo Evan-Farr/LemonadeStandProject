@@ -8,11 +8,11 @@ namespace LemonadeStand
 {
     public class Cup : Product
     {
-        public Cup(double Price, int Quanity)
+        public Cup(double Price)
         {
             type = "cup(s)";
             price = Price;
-            quanity = Quanity;
+            shelfLife = 100;
         }
     }
 }
