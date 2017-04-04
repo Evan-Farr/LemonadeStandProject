@@ -32,7 +32,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                lemons.Add(new Lemon(.15, 1));
+                lemons.Add(new Lemon());
             }
         }
 
@@ -47,7 +47,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                sugar.Add(new Sugar(.20, 1));
+                sugar.Add(new Sugar());
             }
         }
 
@@ -62,7 +62,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                ice.Add(new Ice(.05, 1));
+                ice.Add(new Ice());
             }
         }
 
@@ -77,7 +77,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                cups.Add(new Cup(.5));
+                cups.Add(new Cup());
             }
         }
 

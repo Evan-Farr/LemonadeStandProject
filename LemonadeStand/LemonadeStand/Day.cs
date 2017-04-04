@@ -13,7 +13,7 @@ namespace LemonadeStand
 
         public Day()
         {
-
+            weather = new Weather();
         }
     }
 }
