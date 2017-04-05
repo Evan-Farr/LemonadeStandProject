@@ -10,30 +10,25 @@ namespace LemonadeStand
     {
         public Inventory inventory;
         private double money;
-        private double dailySales;
-        private double runningSales;
+        private double dailyProfitLoss;
+        private double runningProfitLoss;
+        private int daysOpen;
 
         public double Money { get { return money; } }
+        public double DailyProfitLoss { get { return dailyProfitLoss; } set { dailyProfitLoss = value; } }
+        public double RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }
+        public int DayCount { get { return daysOpen; } set { daysOpen = value; } }
 
         public Store()
         {
             inventory = new Inventory();
             money = 200;
+            daysOpen = 0;
         }
 
         public void SellLemonade(Customer customer)
         {
 
-        }
-        
-        public bool Withdraw(double Amount)
-        {
-            if (Amount > money)
-            {
-                return false;
-            }
-            money -= Amount;
-            return true;
         }
     }
 }
