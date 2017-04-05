@@ -10,9 +10,8 @@ namespace LemonadeStand
     {
         public Cup()
         {
-            type = "cup(s)";
-            price = 2;
-            shelfLife = 100;
+            Price = 1;
+            ShelfLife = 100;
         }
     }
 }

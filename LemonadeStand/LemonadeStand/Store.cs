@@ -9,14 +9,14 @@ namespace LemonadeStand
     public class Store
     {
         public Inventory inventory;
-        private double budget;
+        private double money;
         public double dailySales;
         public double runningSales;
         
         public Store()
         {
             inventory = new Inventory();
-            budget = 200;
+            money = 200;
         }
 
         public void SellLemonade(Customer customer)
@@ -26,17 +26,14 @@ namespace LemonadeStand
         
         public bool Withdraw(double Amount)
         {
-            if (Amount > budget)
+            if (Amount > money
             {
                 return false;
             }
-            budget -= Amount;
+            money -= Amount;
             return true;
         }
 
-        public double GetBudget()
-        {
-            return budget;
-        }
+        public double Money { get { return money; } }
     }
 }

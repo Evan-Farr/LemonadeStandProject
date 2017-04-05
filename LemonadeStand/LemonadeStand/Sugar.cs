@@ -10,9 +10,8 @@ namespace LemonadeStand
     {
         public Sugar()
         {
-            type = "sugar cube";
-            price = .75;
-            shelfLife = 5;
+            Price = .50;
+            ShelfLife = 6;
         }
     }
 }

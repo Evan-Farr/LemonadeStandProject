@@ -8,13 +8,20 @@ namespace LemonadeStand
 {
     public abstract class Product
     {
-        public string type;
-        public double price;
-        public int quanity;
-        public int shelfLife;
+        private double price;
+        private int shelfLife;
 
         public Product()
         {
         }
+
+        public void GoBad()
+        {
+            shelfLife -= 1;
+        }
+
+        public double Price { get { return shelfLife; } set { price = value; } }
+
+        public int ShelfLife { get { return shelfLife; } set { shelfLife = value; } }
     }
 }

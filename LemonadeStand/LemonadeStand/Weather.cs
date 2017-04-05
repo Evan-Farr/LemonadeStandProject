@@ -22,6 +22,7 @@ namespace LemonadeStand
             GetSkyCover();
             GetTemperature();
             DetermineLemonadeDemand(skyCover, temperature);
+            DisplayWeather();
         }
 
         public void DisplayWeather()
