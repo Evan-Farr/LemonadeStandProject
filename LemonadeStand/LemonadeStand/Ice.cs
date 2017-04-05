@@ -10,8 +10,8 @@ namespace LemonadeStand
     {
         public Ice()
         {
-            Price = .25;
-            ShelfLife = 1;
+            price = .25;
+            shelfLife = 1;
         }
     }
 }

@@ -8,10 +8,15 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        public List<Lemon> lemons;
-        public List<Sugar> sugar;
-        public List<Ice> ice;
-        public List<Cup> cups;
+        private List<Lemon> lemons; 
+        private List<Sugar> sugar;
+        private List<Ice> ice;
+        private List<Cup> cups;
+
+        public int Lemons { get { return lemons.Count; } }
+        public int Sugar { get { return sugar.Count; } }
+        public int Ice { get { return ice.Count; } }
+        public int Cups { get { return cups.Count; } }
 
         public Inventory()
         {
@@ -81,5 +86,6 @@ namespace LemonadeStand
             }
         }
 
+        
     }
 }

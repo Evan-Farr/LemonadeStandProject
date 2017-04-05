@@ -8,14 +8,14 @@ namespace LemonadeStand
 {
     public abstract class Product
     {
-        private double price;
-        private int shelfLife;
+        protected double price;
+        protected int shelfLife;
 
         public Product()
         {
         }
 
-        public void GoBad()
+        public void Spoil()
         {
             shelfLife -= 1;
         }

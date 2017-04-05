@@ -26,7 +26,7 @@ namespace LemonadeStand
         
         public bool Withdraw(double Amount)
         {
-            if (Amount > money
+            if (Amount > money)
             {
                 return false;
             }

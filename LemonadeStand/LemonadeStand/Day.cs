@@ -8,20 +8,21 @@ namespace LemonadeStand
 {
     public class Day
     {
-        public Weather weather;
+        public Weather todaysWeather;
         private int dayCount;
-        public List<Customer> customers;
+        private List<Customer> customers;
         private int totalCustomers;
+        public LemonadeRecipe recipe;
+
+        public int DayCount { get { return dayCount; } }
+        public int TotalCustomers { get { return totalCustomers; } set { totalCustomers = customers.Count; } }
 
         public Day()
         {
-            weather = new Weather();
+            todaysWeather = new Weather();
             customers = new List<Customer>();
             totalCustomers = customers.Count;
+            recipe = new LemonadeRecipe();
         }
-
-        public int DayCount { get { return dayCount; } }
-
-        public int TotalCustomers { get { return totalCustomers; } set { totalCustomers = customers.Count;  } }
     }
 }
