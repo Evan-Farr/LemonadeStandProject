@@ -12,6 +12,10 @@ namespace LemonadeStand
         private int temperature;
         private string lemonadeDemand;
 
+        public string SkyCover { get { return skyCover; } }
+        public int Temperature { get { return temperature; } }
+        public string LemonadeDemand { get { return lemonadeDemand; } }
+
         public Weather()
         {
             GetWeather();
@@ -90,12 +94,5 @@ namespace LemonadeStand
             }
             return lemonadeDemand;
         }
-
-        public string SkyCover { get { return skyCover; } }
-        
-        public int Temperature { get { return temperature; } }
-
-        public string LemonadeDemand { get { return lemonadeDemand; } }
-        
     }
 }
