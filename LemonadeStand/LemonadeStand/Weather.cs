@@ -27,7 +27,7 @@ namespace LemonadeStand
 
         public void DisplayWeather()
         {
-            Console.WriteLine("Weather Forcast: ");
+            Console.WriteLine("Today's Weather: ");
             Console.WriteLine("> Skycover: " + skyCover);
             Console.WriteLine("> Temperature: " + temperature);
             Console.WriteLine("> Predicted Demand for Lemonade: " + lemonadeDemand);

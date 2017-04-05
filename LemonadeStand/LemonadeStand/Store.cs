@@ -10,9 +10,11 @@ namespace LemonadeStand
     {
         public Inventory inventory;
         private double money;
-        public double dailySales;
-        public double runningSales;
-        
+        private double dailySales;
+        private double runningSales;
+
+        public double Money { get { return money; } }
+
         public Store()
         {
             inventory = new Inventory();
@@ -33,7 +35,5 @@ namespace LemonadeStand
             money -= Amount;
             return true;
         }
-
-        public double Money { get { return money; } }
     }
 }
