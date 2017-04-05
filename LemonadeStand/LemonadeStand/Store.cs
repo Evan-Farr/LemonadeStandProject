@@ -17,13 +17,13 @@ namespace LemonadeStand
         public double Money { get { return money; } set { money = value; } }
         public double DailyProfitLoss { get { return dailyProfitLoss; } set { dailyProfitLoss = value; } }
         public double RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }
-        public int DayCount { get { return daysOpen; } set { daysOpen = value; } }
+        public int DaysOpen { get { return daysOpen; } set { daysOpen = value; } }
 
         public Store()
         {
             inventory = new Inventory();
             money = 200;
-            daysOpen = 0;
+            daysOpen = 1;
         }
 
         public void SellLemonade(Customer customer)

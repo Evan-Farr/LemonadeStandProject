@@ -9,6 +9,7 @@ namespace LemonadeStand
     public class Game
     {
         public Player player1;
+        public Day day;
         private double currentScore;
         private double highScore;
         private string gameMode;
@@ -22,6 +23,8 @@ namespace LemonadeStand
             DisplayPremise();
             GetPlayerName();
             DisplayRules();
+            GetGameMode();
+            RequestNewGame();
         }
 
         private void DisplayPremise()
@@ -84,9 +87,22 @@ namespace LemonadeStand
             }
         }
 
+        private void RunOneDay()
+        {
+            DisplayInventory();
+            day = new Day();
+
+        }
+
         private void RunSevenDayGame()
         {
-
+            while(player1.store.DaysOpen != 8)
+            {
+                RunOneDay();
+                DisplayDailyResults();
+                DisplayInventory();
+                player1.store.DaysOpen += 1;
+            }
         }
 
         private void RunFourteenDayGame()
@@ -99,7 +115,33 @@ namespace LemonadeStand
 
         }
 
-        public void RequestNewGame()
+        private void DisplayDailyResults()
+        {
+            Console.WriteLine();
+            Console.WriteLine("THIS DAY IS DONE!");
+            Console.WriteLine($"Results from day {player1.store.DaysOpen}: ");
+            Console.WriteLine($"Profit/Loss: ");
+            Console.WriteLine($">Total Money: ${player1.store.Money}");
+            Console.WriteLine($">Customers: {day.TotalCustomers}");
+            Console.WriteLine();
+        }
+
+        private void DisplayInventory()
+        {
+            Console.WriteLine("Current Inventory: ");
+            Console.WriteLine($"Cups: {player1.store.inventory.Cups}");
+            Console.WriteLine($"Cups: {player1.store.inventory.Lemons}");
+            Console.WriteLine($"Cups: {player1.store.inventory.Sugar}");
+            Console.WriteLine($"Cups: {player1.store.inventory.Ice}");
+            Console.WriteLine();
+        }
+
+        private void DisplayEndResults()
+        {
+
+        }
+
+        private void RequestNewGame()
         {
             Console.WriteLine();
             Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");

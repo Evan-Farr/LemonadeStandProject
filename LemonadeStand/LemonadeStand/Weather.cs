@@ -35,6 +35,7 @@ namespace LemonadeStand
             Console.WriteLine("> Skycover: " + skyCover);
             Console.WriteLine("> Temperature: " + temperature);
             Console.WriteLine("> Predicted Demand for Lemonade: " + lemonadeDemand);
+            Console.WriteLine();
 
         }
 
