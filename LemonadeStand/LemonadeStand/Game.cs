@@ -59,28 +59,71 @@ namespace LemonadeStand
         private void GetGameMode()
         {
             Console.WriteLine("CHOOSE GAME DURATION: ");
-            Console.WriteLine("Enter 1, 2 or 3: ");
+            Console.WriteLine("Enter '1', '2' or '3': ");
             Console.WriteLine("[1] 7 days");
             Console.WriteLine("[2] 14 days");
             Console.WriteLine("[3] 21 days");
             gameMode = Console.ReadLine();
             if (gameMode == "1")
             {
-                
+                RunSevenDayGame();
             }
             else if (gameMode == "2")
             {
-                
+                RunFourteenDayGame();
             }
             else if (gameMode == "2")
             {
-                
+                RunTwentyOneDayGame();
             }
             Console.WriteLine();
             if (gameMode != "1" && gameMode != "2" && gameMode != "3")
             {
-                Console.WriteLine("You did not enter a valid choice. Please enter only the number 1, 2 or 3.");
+                Console.WriteLine("You did not enter a valid choice. Please enter only '1', '2' or '3'.");
                 GetGameMode();
+            }
+        }
+
+        private void RunSevenDayGame()
+        {
+
+        }
+
+        private void RunFourteenDayGame()
+        {
+
+        }
+
+        private void RunTwentyOneDayGame()
+        {
+
+        }
+
+        public void RequestNewGame()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
+            string response = Console.ReadLine().ToLower();
+
+            if (response == "yes")
+            {
+                Console.Clear();
+                PlayGame();
+            }
+            else if (response == "no")
+            {
+                Console.Clear();
+                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Hit [Enter] to quite.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("You did not enter a valid input. Please type only 'yes' or 'no' as an answer.");
+                Console.WriteLine();
+                RequestNewGame();
             }
         }
     }

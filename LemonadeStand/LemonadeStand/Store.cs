@@ -14,7 +14,7 @@ namespace LemonadeStand
         private double runningProfitLoss;
         private int daysOpen;
 
-        public double Money { get { return money; } }
+        public double Money { get { return money; } set { money = value; } }
         public double DailyProfitLoss { get { return dailyProfitLoss; } set { dailyProfitLoss = value; } }
         public double RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }
         public int DayCount { get { return daysOpen; } set { daysOpen = value; } }
