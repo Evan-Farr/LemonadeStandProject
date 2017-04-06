@@ -27,7 +27,7 @@ namespace LemonadeStand
         {
             GetSkyCover();
             GetTemperature();
-            DetermineLemonadeDemand(skyCover, temperature);
+            DetermineDemand(skyCover, temperature);
             DisplayWeather();
         }
 
@@ -76,7 +76,7 @@ namespace LemonadeStand
             return temperature;
         }
 
-        public string DetermineLemonadeDemand(string skyCover, string temperature)
+        public string DetermineDemand(string skyCover, string temperature)
         {
             if(skyCover == "sunny" && temperature == "cold")
             {
