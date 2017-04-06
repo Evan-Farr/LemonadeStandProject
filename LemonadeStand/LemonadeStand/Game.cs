@@ -13,6 +13,7 @@ namespace LemonadeStand
         private double currentScore;
         private double highScore;
         private string gameMode;
+        private Random random;
 
         public double CurrentScore { get { return currentScore; } set { currentScore = value; } }
         public double HighScore { get { return highScore; } set { highScore = value; } }
@@ -20,6 +21,7 @@ namespace LemonadeStand
 
         public void PlayGame()
         {
+            random = new Random();
             DisplayPremise();
             GetPlayerName();
             DisplayRules();

@@ -16,6 +16,7 @@ namespace LemonadeStand
         private int cupsBought;
         private Day currentDay;
         private Inventory inventory;
+        private Random random;
 
         public double MaxWillingToPay { get { return maxWillingToPay; } }
         public int LemonPreference { get { return lemonPreference; } }
@@ -23,8 +24,9 @@ namespace LemonadeStand
         public int CupsBought { get { return cupsBought; } set { CupsBought = value; } }
         public Inventory Inventory { get { return inventory; } set { inventory = value; } }
 
-        public Customer(Day CurrentDay)
+        public Customer(Day CurrentDay, Random Random)
         {
+            random = Random;
             currentDay = CurrentDay;
             maxWillingToPay = SetMaxWillingToPay();
             chanceOfBuying = DetermineChanceOfBuying();
@@ -36,35 +38,20 @@ namespace LemonadeStand
 
         private double SetMaxWillingToPay()
         {
-            Random random = new Random();
             maxWillingToPay = random.NextDouble() * (6 - 1) + 1;
+            maxWillingToPay = Math.Round(maxWillingToPay, 2);
             return maxWillingToPay;
         }
 
-        private int SetLemonPreference()
+        private void SetTastePreference()
         {
-            Random random = new Random();
             lemonPreference = random.Next(1, 5);
-            return lemonPreference;
-        }
-
-        private int SetSugarPreference()
-        {
-            Random random = new Random();
             sugarPreference = random.Next(1, 6);
-            return sugarPreference;
-        }
-
-        private int SetIcePreference()
-        {
-            Random random = new Random();
             icePreference = random.Next(1, 10);
-            return icePreference;
         }
 
         private int DetermineChanceOfBuying()
         {
-            Random random = new Random();
             int amount = random.Next(11);
             return chanceOfBuying;
         }
@@ -87,7 +74,6 @@ namespace LemonadeStand
                     Inventory.RemoveCups(3);
                 }else 
                 {
-                    Random random = new Random();
                     int amount = random.Next(2);
                     if (amount == 0)
                     {

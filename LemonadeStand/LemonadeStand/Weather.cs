@@ -9,15 +9,17 @@ namespace LemonadeStand
     public class Weather
     {
         private string skyCover;
-        private int temperature;
+        private string temperature;
         private string lemonadeDemand;
+        private Random random;
 
         public string SkyCover { get { return skyCover; } }
-        public int Temperature { get { return temperature; } }
+        public string Temperature { get { return temperature; } }
         public string LemonadeDemand { get { return lemonadeDemand; } }
 
-        public Weather()
+        public Weather(Random Random)
         {
+            random = Random;
             GetWeather();
         }
 
@@ -40,13 +42,12 @@ namespace LemonadeStand
 
         public string GetSkyCover()
         {
-            Random random = new Random();
-            int option = random.Next(11);
+            int randomSkyCover = random.Next(11);
 
-            if(option == 0 && option == 1 && option == 2 && option == 3 && option == 4 && option == 5)
+            if(randomSkyCover >= 0 && randomSkyCover <= 5)
             {
                 skyCover = "sunny";
-            }else if(option == 6 && option == 7 && option == 8)
+            }else if(randomSkyCover >= 6 && randomSkyCover <= 8)
             {
                 skyCover = "overcast";
             }else
@@ -56,39 +57,51 @@ namespace LemonadeStand
             return skyCover;
         }
 
-        public int GetTemperature()
+        public string GetTemperature()
         {
-            Random random = new Random();
-            temperature = random.Next(65, 102);
+            int randomTemperature = random.Next(11);
+
+            if (randomTemperature >= 0 && randomTemperature <= 2)
+            {
+                temperature = "hot";
+            }
+            else if (randomTemperature >= 6 && randomTemperature <= 8)
+            {
+                temperature = "comfortable";
+            }
+            else
+            {
+                temperature = "cold";
+            }
             return temperature;
         }
 
-        public string DetermineLemonadeDemand(string skyCover, int temperature)
+        public string DetermineLemonadeDemand(string skyCover, string temperature)
         {
-            if(skyCover == "sunny" && temperature >= 65 && temperature <= 74)
+            if(skyCover == "sunny" && temperature == "cold")
             {
                 lemonadeDemand = "medium";
-            }else if(skyCover == "sunny" && temperature >= 75 && temperature <= 90)
+            }else if(skyCover == "sunny" && temperature == "comfortable")
             {
                 lemonadeDemand = "high";
             }
-            else if (skyCover == "sunny" && temperature >= 91 && temperature <= 102)
+            else if (skyCover == "sunny" && temperature == "hot")
             {
                 lemonadeDemand = "very high";
             }
-            else if (skyCover == "overcast" && temperature >= 65 && temperature <= 74)
+            else if (skyCover == "overcast" && temperature == "cold")
             {
                 lemonadeDemand = "low";
             }
-            else if (skyCover == "overcast" && temperature >= 75 && temperature <= 90)
+            else if (skyCover == "overcast" && temperature == "comfortable")
             {
                 lemonadeDemand = "medium";
             }
-            else if (skyCover == "overcast" && temperature >= 91 && temperature <= 102)
+            else if (skyCover == "overcast" && temperature == "hot")
             {
                 lemonadeDemand = "high";
             }
-            else if (skyCover == "rainy" && temperature >= 65 && temperature <= 102)
+            else if (skyCover == "rainy")
             {
                 lemonadeDemand = "low";
             }
