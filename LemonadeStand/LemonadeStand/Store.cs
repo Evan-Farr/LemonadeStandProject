@@ -43,7 +43,7 @@ namespace LemonadeStand
                 if (customer.LemonPreference == lemonade.LemonAmount && customer.SugarPreference == lemonade.SugarAmount && customer.IcePreference == lemonade.IceAmount)
                 {
                     customer.CupsBought = 3;
-                    currentDay.Sales += (3 * currentDay.LemonadePrice);
+                    currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
                     currentDay.Customers.Add(customer);
                     Inventory.RemoveLemons(3 * lemonade.LemonAmount);
                     Inventory.RemoveSugar(3 * lemonade.SugarAmount);
@@ -60,7 +60,7 @@ namespace LemonadeStand
                     else if (amount == 1)
                     {
                         customer.CupsBought = 1;
-                        currentDay.Sales += currentDay.LemonadePrice;
+                        currentDay.Sales += currentDay.Lemonade.PricePerCup;
                         currentDay.Customers.Add(customer);
                         Inventory.RemoveLemons(lemonade.LemonAmount);
                         Inventory.RemoveSugar(lemonade.SugarAmount);

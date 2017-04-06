@@ -20,6 +20,9 @@ namespace LemonadeStand
 
         public Lemonade()
         {
+            lemonAmount = 2;
+            iceAmount = 2;
+            sugarAmount = 2;
             pricePerCup = 2.00;
             GetRecipe();
         }

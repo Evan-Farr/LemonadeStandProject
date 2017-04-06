@@ -14,20 +14,19 @@ namespace LemonadeStand
         private List<Customer> potentialCustomers;
         private int totalCustomers;
         private Lemonade lemonade;
-        private double lemonadePrice;
         private double sales;
         private Random random;
 
         public Weather TodaysWeather { get { return todaysWeather; } }
         public Lemonade Lemonade { get { return lemonade; } }
         public int TotalCustomers { get { return customers.Count; } }
-        public double LemonadePrice { get { return lemonadePrice; } }
         public List<Customer> Customers { get { return customers; } }
         public List<Customer> PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }
         public double Sales { get { return sales; } set { sales = value; } }
 
-        public Day(Random random)
+        public Day(Random Random)
         {
+            random = Random;
             todaysWeather = new Weather(random);
             customers = new List<Customer>();
             potentialCustomers = new List<Customer>();

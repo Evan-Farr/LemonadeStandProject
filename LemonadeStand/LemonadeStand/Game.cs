@@ -91,6 +91,7 @@ namespace LemonadeStand
 
         private void RunOneDay()
         {
+            DisplayCash();
             DisplayInventory();
             day = new Day(random);
 
@@ -100,6 +101,8 @@ namespace LemonadeStand
         {
             while(player1.store.DaysOpen != 8)
             {
+                Console.WriteLine();
+                Console.WriteLine();
                 RunOneDay();
                 DisplayDailyResults();
                 DisplayInventory();
@@ -125,6 +128,11 @@ namespace LemonadeStand
             Console.WriteLine($"Profit/Loss: ");
             Console.WriteLine($">Total Money: ${player1.store.Money}");
             Console.WriteLine($">Customers: {day.TotalCustomers}");
+            Console.WriteLine();
+        }
+        private void DisplayCash()
+        {
+            Console.WriteLine($"Money: ${player1.store.Money}");
             Console.WriteLine();
         }
 
