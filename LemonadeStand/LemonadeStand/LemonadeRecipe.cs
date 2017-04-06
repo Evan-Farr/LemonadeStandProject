@@ -37,13 +37,13 @@ namespace LemonadeStand
 
         public void GetSugarAmount()
         {
-            Console.WriteLine("How many lemons should be in each glass? Enter the amount: ");
+            Console.WriteLine("How much sugar should be in each glass? Enter the amount: ");
             sugarAmount = int.Parse(Console.ReadLine());
         }
 
         public void GetIceAmount()
         {
-            Console.WriteLine("How many lemons should be in each glass? Enter the amount: ");
+            Console.WriteLine("How many ice cubes should be in each glass? Enter the amount: ");
             iceAmount = int.Parse(Console.ReadLine());
         }
         
