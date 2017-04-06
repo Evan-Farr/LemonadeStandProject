@@ -9,9 +9,10 @@ namespace LemonadeStand
     public class Player
     {
         private string name;
-        public Store store;
+        private Store store;
 
         public string Name { get { return name; } set { name = value; } }
+        public Store Store { get { return store; } }
 
         public Player(string Name, Random random)
         {

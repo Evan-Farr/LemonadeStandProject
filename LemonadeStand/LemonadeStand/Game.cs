@@ -14,6 +14,10 @@ namespace LemonadeStand
         private double highScore;
         private string gameMode;
         private Random random;
+        private Cup cup;
+        private Lemon lemon;
+        private Ice ice;
+        private Sugar sugar;
 
         public double CurrentScore { get { return currentScore; } set { currentScore = value; } }
         public double HighScore { get { return highScore; } set { highScore = value; } }
@@ -93,20 +97,20 @@ namespace LemonadeStand
         {
             DisplayCash();
             DisplayInventory();
+            
             day = new Day(random);
-
         }
 
         private void RunSevenDayGame()
         {
-            while(player1.store.DaysOpen != 8)
+            while(player1.Store.DaysOpen != 8)
             {
                 Console.WriteLine();
                 Console.WriteLine();
                 RunOneDay();
                 DisplayDailyResults();
                 DisplayInventory();
-                player1.store.DaysOpen += 1;
+                player1.Store.DaysOpen += 1;
             }
         }
 
@@ -124,25 +128,54 @@ namespace LemonadeStand
         {
             Console.WriteLine();
             Console.WriteLine("THIS DAY IS DONE!");
-            Console.WriteLine($"Results from day {player1.store.DaysOpen}: ");
+            Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
             Console.WriteLine($"Profit/Loss: ");
-            Console.WriteLine($">Total Money: ${player1.store.Money}");
+            Console.WriteLine($">Total Money: ${player1.Store.Money}");
             Console.WriteLine($">Customers: {day.TotalCustomers}");
             Console.WriteLine();
         }
         private void DisplayCash()
         {
-            Console.WriteLine($"Money: ${player1.store.Money}");
+            Console.WriteLine($"Money: ${player1.Store.Money}");
             Console.WriteLine();
         }
 
         private void DisplayInventory()
         {
             Console.WriteLine("Current Inventory: ");
-            Console.WriteLine($"Cups: {player1.store.Inventory.Cups}");
-            Console.WriteLine($"Cups: {player1.store.Inventory.Lemons}");
-            Console.WriteLine($"Cups: {player1.store.Inventory.Sugar}");
-            Console.WriteLine($"Cups: {player1.store.Inventory.Ice}");
+            Console.WriteLine($"Cups: {player1.Store.Inventory.Cups}");
+            Console.WriteLine($"Lemons: {player1.Store.Inventory.Lemons}");
+            Console.WriteLine($"Sugar: {player1.Store.Inventory.Sugar}");
+            Console.WriteLine($"Ice: {player1.Store.Inventory.Ice}");
+            Console.WriteLine();
+        }
+
+        private void RequestInventoryRefill()
+        {
+            Console.WriteLine("Do you want to re-fill your inventory? Enter 'yes' or 'no': ");
+            string response = Console.ReadLine();
+            if(response == "yes")
+            {
+                DisplayInventory();
+                DisplayPurchasePrices();
+                Console.WriteLine("Enter amount for each. If you don't want to buy any of a certain product, enter '0'.");
+                Console.WriteLine("Cups: ");
+                int cupAmount = int.Parse(Console.ReadLine());
+                if(cupAmount != 0)
+                {
+                    player1.Store.Inventory.AddCups(cupAmount);
+                }
+            }
+        }
+
+        private void DisplayPurchasePrices()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Cost to buy:");
+            Console.WriteLine($"Cup: ${cup.Price}");
+            Console.WriteLine($"Lemon: ${cup.Price}");
+            Console.WriteLine($"Sugar: ${cup.Price}");
+            Console.WriteLine($"Ice: ${cup.Price}");
             Console.WriteLine();
         }
 
