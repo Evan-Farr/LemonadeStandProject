@@ -29,25 +29,25 @@ namespace LemonadeStand
             DisplayRecipe();
         }
 
-        public void GetLemonAmount()
+        private void GetLemonAmount()
         {
             Console.WriteLine("How many lemons should be in each glass? Enter the amount: ");
             lemonAmount = int.Parse(Console.ReadLine());
         }
 
-        public void GetSugarAmount()
+        private void GetSugarAmount()
         {
             Console.WriteLine("How much sugar should be in each glass? Enter the amount: ");
             sugarAmount = int.Parse(Console.ReadLine());
         }
 
-        public void GetIceAmount()
+        private void GetIceAmount()
         {
             Console.WriteLine("How many ice cubes should be in each glass? Enter the amount: ");
             iceAmount = int.Parse(Console.ReadLine());
         }
-        
-        public void DisplayRecipe()
+
+        private void DisplayRecipe()
         {
             Console.WriteLine("Ingredients per cup of Lemonade: ");
             Console.WriteLine($"Lemons: {lemonAmount}");
