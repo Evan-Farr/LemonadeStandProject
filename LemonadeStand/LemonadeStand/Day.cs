@@ -11,25 +11,60 @@ namespace LemonadeStand
 
         private Weather todaysWeather;
         private List<Customer> customers;
+        private List<Customer> potentialCustomers;
         private int totalCustomers;
         private Lemonade lemonade;
         private double lemonadePrice;
         private double sales;
+        private Random random;
 
         public Weather TodaysWeather { get { return todaysWeather; } }
         public Lemonade Lemonade { get { return lemonade; } }
         public int TotalCustomers { get { return customers.Count; } }
         public double LemonadePrice { get { return lemonadePrice; } }
         public List<Customer> Customers { get { return customers; } }
+        public List<Customer> PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }
         public double Sales { get { return sales; } set { sales = value; } }
 
         public Day(Random random)
         {
             todaysWeather = new Weather(random);
             customers = new List<Customer>();
+            potentialCustomers = new List<Customer>();
             totalCustomers = customers.Count;
             lemonade = new Lemonade();
             sales = 0;
+        }
+
+        private void SetPotentialCustomers()
+        {
+            if(todaysWeather.LemonadeDemand == "low")
+            {
+                while(potentialCustomers.Count <= 50)
+                {
+                    potentialCustomers.Add(new Customer(random));
+                }
+            }else if(todaysWeather.LemonadeDemand == "medium")
+            {
+                while(potentialCustomers.Count <= 100)
+                {
+                    potentialCustomers.Add(new Customer(random));
+                }
+            }
+            else if (todaysWeather.LemonadeDemand == "high")
+            {
+                while (potentialCustomers.Count <= 150)
+                {
+                    potentialCustomers.Add(new Customer(random));
+                }
+            }
+            else if (todaysWeather.LemonadeDemand == "very high")
+            {
+                while (potentialCustomers.Count <= 200)
+                {
+                    potentialCustomers.Add(new Customer(random));
+                }
+            }
         }
     }
 }
