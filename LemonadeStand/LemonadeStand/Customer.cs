@@ -15,11 +15,13 @@ namespace LemonadeStand
         private int chanceOfBuying;
         private int cupsBought;
         private Day currentDay;
+        private Inventory inventory;
 
         public double MaxWillingToPay { get { return maxWillingToPay; } }
         public int LemonPreference { get { return lemonPreference; } }
         public int ChanceOfBuying { get { return chanceOfBuying; } }
         public int CupsBought { get { return cupsBought; } set { CupsBought = value; } }
+        public Inventory Inventory { get { return inventory; } set { inventory = value; } }
 
         public Customer(Day CurrentDay)
         {
@@ -49,7 +51,7 @@ namespace LemonadeStand
         private int SetSugarPreference()
         {
             Random random = new Random();
-            sugarPreference = random.Next(1, 7);
+            sugarPreference = random.Next(1, 6);
             return sugarPreference;
         }
 
@@ -63,7 +65,7 @@ namespace LemonadeStand
         private int DetermineChanceOfBuying()
         {
             Random random = new Random();
-            int amount = random.Next(101);
+            int amount = random.Next(11);
             return chanceOfBuying;
         }
 
@@ -72,40 +74,45 @@ namespace LemonadeStand
             if(maxWillingToPay < currentDay.LemonadePrice)
             {
                 cupsBought = 0;
-            }else if(maxWillingToPay > currentDay.LemonadePrice)
+            }else if(maxWillingToPay >= currentDay.LemonadePrice)
             {
-                if(lemonPreference == currentDay.Recipe.LemonAmount && sugarPreference != currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
+                if (lemonPreference == currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference == currentDay.Recipe.IceAmount)
+                {
+                    cupsBought = 3;
+                    currentDay.Sales += (3 * currentDay.LemonadePrice);
+                    currentDay.Customers.Add(this);
+                    Inventory.RemoveLemons(3 * currentDay.Recipe.LemonAmount);
+                    Inventory.RemoveSugar(3 * currentDay.Recipe.SugarAmount);
+                    Inventory.RemoveIce(3 * currentDay.Recipe.IceAmount);
+                }
+                else if (lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
                 {
                     cupsBought = 1;
                     currentDay.Sales += currentDay.LemonadePrice;
                     currentDay.Customers.Add(this);
-                }else if(lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
-                {
-                    cupsBought = 1;
-                    currentDay.Sales += currentDay.LemonadePrice;
-                    currentDay.Customers.Add(this);
-                }else if (lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference != currentDay.Recipe.SugarAmount && icePreference == currentDay.Recipe.IceAmount)
-                {
-                    cupsBought = 1;
-                    currentDay.Sales += currentDay.LemonadePrice;
-                    currentDay.Customers.Add(this);
-                }else if (lemonPreference == currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference == currentDay.Recipe.IceAmount)
-                {
-                    cupsBought = 4;
-                    currentDay.Sales += (4 * currentDay.LemonadePrice);
-                    currentDay.Customers.Add(this);
+                    Inventory.RemoveLemons(currentDay.Recipe.LemonAmount);
+                    Inventory.RemoveSugar(currentDay.Recipe.SugarAmount);
+                    Inventory.RemoveIce(currentDay.Recipe.IceAmount);
                 }else
                 {
+                    if()
+                    {
+
+                    }
                     Random random = new Random();
                     int amount = random.Next(2);
-                    if(amount == 0)
+                    if (amount == 0)
                     {
                         cupsBought = 0;
-                    }else if(amount == 1)
+                    }
+                    else if (amount == 1)
                     {
                         cupsBought = 1;
                         currentDay.Sales += currentDay.LemonadePrice;
                         currentDay.Customers.Add(this);
+                        Inventory.RemoveLemons(currentDay.Recipe.LemonAmount);
+                        Inventory.RemoveSugar(currentDay.Recipe.SugarAmount);
+                        Inventory.RemoveIce(currentDay.Recipe.IceAmount);
                     }
                 }
             }

@@ -34,7 +34,6 @@ namespace LemonadeStand
             Console.WriteLine("Today's Weather: ");
             Console.WriteLine("> Skycover: " + skyCover);
             Console.WriteLine("> Temperature: " + temperature);
-            Console.WriteLine("> Predicted Demand for Lemonade: " + lemonadeDemand);
             Console.WriteLine();
 
         }
@@ -68,7 +67,7 @@ namespace LemonadeStand
         {
             if(skyCover == "sunny" && temperature >= 65 && temperature <= 74)
             {
-                lemonadeDemand = "low";
+                lemonadeDemand = "medium";
             }else if(skyCover == "sunny" && temperature >= 75 && temperature <= 90)
             {
                 lemonadeDemand = "high";
