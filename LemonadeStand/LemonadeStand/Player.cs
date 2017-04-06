@@ -13,10 +13,10 @@ namespace LemonadeStand
 
         public string Name { get { return name; } set { name = value; } }
 
-        public Player(string Name)
+        public Player(string Name, Random random)
         {
             name = Name;
-            store = new Store();
+            store = new Store(random);
         }
     }
 }

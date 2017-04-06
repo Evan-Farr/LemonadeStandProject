@@ -39,7 +39,7 @@ namespace LemonadeStand
 
         private void GetPlayerName()
         {
-            player1 = new Player("Lionel Lemon");
+            player1 = new Player("Lionel Lemon", random);
             Console.WriteLine("First, before I can give you a stand, I'll need to know your name.");
             Console.WriteLine("Enter your name: ");
             player1.Name = Console.ReadLine();
@@ -92,7 +92,7 @@ namespace LemonadeStand
         private void RunOneDay()
         {
             DisplayInventory();
-            day = new Day();
+            day = new Day(random);
 
         }
 
