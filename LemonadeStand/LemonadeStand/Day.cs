@@ -9,15 +9,19 @@ namespace LemonadeStand
     public class Day
     {
 
-        public Weather todaysWeather;
+        private Weather todaysWeather;
         private List<Customer> customers;
         private int totalCustomers;
-        public LemonadeRecipe recipe;
+        private LemonadeRecipe recipe;
         private double lemonadePrice;
+        private double sales;
 
+        public Weather TodaysWeather { get { return todaysWeather; } }
+        public LemonadeRecipe Recipe { get { return recipe; } }
         public int TotalCustomers { get { return customers.Count; } }
         public double LemonadePrice { get { return lemonadePrice; } }
         public List<Customer> Customers { get { return customers; } }
+        public double Sales { get { return sales; } set { sales = value; } }
 
         public Day()
         {
@@ -26,6 +30,7 @@ namespace LemonadeStand
             totalCustomers = customers.Count;
             recipe = new LemonadeRecipe();
             lemonadePrice = 2.00;
+            sales = 0;
         }
 
         public void SetLemonadePrice()

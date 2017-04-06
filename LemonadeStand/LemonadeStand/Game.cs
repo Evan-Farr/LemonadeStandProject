@@ -129,10 +129,10 @@ namespace LemonadeStand
         private void DisplayInventory()
         {
             Console.WriteLine("Current Inventory: ");
-            Console.WriteLine($"Cups: {player1.store.inventory.Cups}");
-            Console.WriteLine($"Cups: {player1.store.inventory.Lemons}");
-            Console.WriteLine($"Cups: {player1.store.inventory.Sugar}");
-            Console.WriteLine($"Cups: {player1.store.inventory.Ice}");
+            Console.WriteLine($"Cups: {player1.store.Inventory.Cups}");
+            Console.WriteLine($"Cups: {player1.store.Inventory.Lemons}");
+            Console.WriteLine($"Cups: {player1.store.Inventory.Sugar}");
+            Console.WriteLine($"Cups: {player1.store.Inventory.Ice}");
             Console.WriteLine();
         }
 

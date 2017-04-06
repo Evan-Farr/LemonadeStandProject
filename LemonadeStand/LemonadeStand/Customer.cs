@@ -16,15 +16,20 @@ namespace LemonadeStand
         private int cupsBought;
         private Day currentDay;
 
-        public double MaxWillingToPay { get { return maxWillingToPay; } set { maxWillingToPay = value; } }
-        public int ChanceOfBuying { get { return chanceOfBuying; } set { chanceOfBuying = value; } }
-        public int CupsBought { get { return cupsBought; } set { cupsBought = value; } }
+        public double MaxWillingToPay { get { return maxWillingToPay; } }
+        public int LemonPreference { get { return lemonPreference; } }
+        public int ChanceOfBuying { get { return chanceOfBuying; } }
+        public int CupsBought { get { return cupsBought; } set { CupsBought = value; } }
 
-        public Customer(Day currentDay)
+        public Customer(Day CurrentDay)
         {
+            currentDay = CurrentDay;
             maxWillingToPay = SetMaxWillingToPay();
             chanceOfBuying = DetermineChanceOfBuying();
-            this.currentDay = currentDay;
+            lemonPreference = SetLemonPreference();
+            sugarPreference = SetSugarPreference();
+            icePreference = SetIcePreference();
+            cupsBought = 0;
         }
 
         private double SetMaxWillingToPay()
@@ -34,9 +39,31 @@ namespace LemonadeStand
             return maxWillingToPay;
         }
 
+        private int SetLemonPreference()
+        {
+            Random random = new Random();
+            lemonPreference = random.Next(1, 5);
+            return lemonPreference;
+        }
+
+        private int SetSugarPreference()
+        {
+            Random random = new Random();
+            sugarPreference = random.Next(1, 7);
+            return sugarPreference;
+        }
+
+        private int SetIcePreference()
+        {
+            Random random = new Random();
+            icePreference = random.Next(1, 10);
+            return icePreference;
+        }
+
         private int DetermineChanceOfBuying()
         {
-
+            Random random = new Random();
+            int amount = random.Next(101);
             return chanceOfBuying;
         }
 
@@ -47,10 +74,40 @@ namespace LemonadeStand
                 cupsBought = 0;
             }else if(maxWillingToPay > currentDay.LemonadePrice)
             {
-                Random random = new Random();
-                int amount = random.Next(4);
-                cupsBought += amount;
-                currentDay.Customers.Add(this);
+                if(lemonPreference == currentDay.Recipe.LemonAmount && sugarPreference != currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
+                {
+                    cupsBought = 1;
+                    currentDay.Sales += currentDay.LemonadePrice;
+                    currentDay.Customers.Add(this);
+                }else if(lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
+                {
+                    cupsBought = 1;
+                    currentDay.Sales += currentDay.LemonadePrice;
+                    currentDay.Customers.Add(this);
+                }else if (lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference != currentDay.Recipe.SugarAmount && icePreference == currentDay.Recipe.IceAmount)
+                {
+                    cupsBought = 1;
+                    currentDay.Sales += currentDay.LemonadePrice;
+                    currentDay.Customers.Add(this);
+                }else if (lemonPreference == currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference == currentDay.Recipe.IceAmount)
+                {
+                    cupsBought = 4;
+                    currentDay.Sales += (4 * currentDay.LemonadePrice);
+                    currentDay.Customers.Add(this);
+                }else
+                {
+                    Random random = new Random();
+                    int amount = random.Next(2);
+                    if(amount == 0)
+                    {
+                        cupsBought = 0;
+                    }else if(amount == 1)
+                    {
+                        cupsBought = 1;
+                        currentDay.Sales += currentDay.LemonadePrice;
+                        currentDay.Customers.Add(this);
+                    }
+                }
             }
         }
     }
