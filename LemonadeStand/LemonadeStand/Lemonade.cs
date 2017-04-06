@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public class LemonadeRecipe
+    public class Lemonade
     {
         private int lemonAmount;
         private int iceAmount;
         private int sugarAmount;
+        private double pricePerCup;
 
         public int LemonAmount { get { return lemonAmount; } }
         public int IceAmount { get { return iceAmount; } }
         public int SugarAmount { get { return sugarAmount; } }
+        public double PricePerCup { get { return pricePerCup; } set { pricePerCup = value; } }
 
-        public LemonadeRecipe()
+        public Lemonade()
         {
+            pricePerCup = 2.00;
             GetRecipe();
         }
 
@@ -54,6 +57,29 @@ namespace LemonadeStand
             Console.WriteLine($"Sugar: {sugarAmount}");
             Console.WriteLine($"Ice: {iceAmount}");
             Console.WriteLine();
+        }
+
+        public void SetLemonadePrice()
+        {
+            Console.WriteLine($"Default price per cup of lemonade: ${pricePerCup}");
+            Console.WriteLine("Would you like to change this price? Enter 'yes' or 'no'.");
+            string alter = Console.ReadLine();
+
+            if (alter == "yes")
+            {
+                Console.WriteLine("Enter the amount you want to charge for each cup: ");
+                pricePerCup = double.Parse(Console.ReadLine());
+            }
+            else if (alter == "no")
+            {
+                pricePerCup = 2.00;
+            }
+            else if (alter != "yes" && alter != "no")
+            {
+                Console.WriteLine("You did not enter a valid response. Please enter only 'yes' or 'no' as a response.");
+                Console.WriteLine();
+                SetLemonadePrice();
+            }
         }
     }
 }

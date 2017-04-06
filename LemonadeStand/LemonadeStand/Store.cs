@@ -13,8 +13,9 @@ namespace LemonadeStand
         private double dailyProfitLoss;
         private double runningProfitLoss;
         private int daysOpen;
-        private Day currentDay;
+        private Lemonade lemonade;
         private Customer customer;
+        private Day currentDay;
         private Random random;
 
         public Inventory Inventory { get { return inventory; } }
@@ -31,22 +32,22 @@ namespace LemonadeStand
             daysOpen = 1;
         }
 
-        public void SellLemonade(Customer customer, Day currentDay)
+        public void SellLemonade(Customer customer, Lemonade lemonade, Day currentDay)
         {
-            if (customer.MaxWillingToPay < currentDay.LemonadePrice)
+            if (customer.MaxWillingToPay < lemonade.PricePerCup)
             {
                 customer.CupsBought = 0;
             }
-            else if (customer.MaxWillingToPay >= currentDay.LemonadePrice)
+            else if (customer.MaxWillingToPay >= lemonade.PricePerCup)
             {
-                if (customer.LemonPreference == currentDay.Recipe.LemonAmount && customer.SugarPreference == currentDay.Recipe.SugarAmount && customer.IcePreference == currentDay.Recipe.IceAmount)
+                if (customer.LemonPreference == lemonade.LemonAmount && customer.SugarPreference == lemonade.SugarAmount && customer.IcePreference == lemonade.IceAmount)
                 {
                     customer.CupsBought = 3;
                     currentDay.Sales += (3 * currentDay.LemonadePrice);
                     currentDay.Customers.Add(customer);
-                    Inventory.RemoveLemons(3 * currentDay.Recipe.LemonAmount);
-                    Inventory.RemoveSugar(3 * currentDay.Recipe.SugarAmount);
-                    Inventory.RemoveIce(3 * currentDay.Recipe.IceAmount);
+                    Inventory.RemoveLemons(3 * lemonade.LemonAmount);
+                    Inventory.RemoveSugar(3 * lemonade.SugarAmount);
+                    Inventory.RemoveIce(3 * lemonade.IceAmount);
                     Inventory.RemoveCups(3);
                 }
                 else
@@ -61,9 +62,9 @@ namespace LemonadeStand
                         customer.CupsBought = 1;
                         currentDay.Sales += currentDay.LemonadePrice;
                         currentDay.Customers.Add(customer);
-                        Inventory.RemoveLemons(currentDay.Recipe.LemonAmount);
-                        Inventory.RemoveSugar(currentDay.Recipe.SugarAmount);
-                        Inventory.RemoveIce(currentDay.Recipe.IceAmount);
+                        Inventory.RemoveLemons(lemonade.LemonAmount);
+                        Inventory.RemoveSugar(lemonade.SugarAmount);
+                        Inventory.RemoveIce(lemonade.IceAmount);
                         Inventory.RemoveCups(1);
                     }
                 }

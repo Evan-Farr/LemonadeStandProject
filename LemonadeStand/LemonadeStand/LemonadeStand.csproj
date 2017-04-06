@@ -52,7 +52,7 @@
     <Compile Include="Ice.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Lemon.cs" />
-    <Compile Include="LemonadeRecipe.cs" />
+    <Compile Include="Lemonade.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
