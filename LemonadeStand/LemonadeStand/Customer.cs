@@ -84,21 +84,9 @@ namespace LemonadeStand
                     Inventory.RemoveLemons(3 * currentDay.Recipe.LemonAmount);
                     Inventory.RemoveSugar(3 * currentDay.Recipe.SugarAmount);
                     Inventory.RemoveIce(3 * currentDay.Recipe.IceAmount);
-                }
-                else if (lemonPreference != currentDay.Recipe.LemonAmount && sugarPreference == currentDay.Recipe.SugarAmount && icePreference != currentDay.Recipe.IceAmount)
+                    Inventory.RemoveCups(3);
+                }else 
                 {
-                    cupsBought = 1;
-                    currentDay.Sales += currentDay.LemonadePrice;
-                    currentDay.Customers.Add(this);
-                    Inventory.RemoveLemons(currentDay.Recipe.LemonAmount);
-                    Inventory.RemoveSugar(currentDay.Recipe.SugarAmount);
-                    Inventory.RemoveIce(currentDay.Recipe.IceAmount);
-                }else
-                {
-                    if()
-                    {
-
-                    }
                     Random random = new Random();
                     int amount = random.Next(2);
                     if (amount == 0)
@@ -113,6 +101,7 @@ namespace LemonadeStand
                         Inventory.RemoveLemons(currentDay.Recipe.LemonAmount);
                         Inventory.RemoveSugar(currentDay.Recipe.SugarAmount);
                         Inventory.RemoveIce(currentDay.Recipe.IceAmount);
+                        Inventory.RemoveCups(1);
                     }
                 }
             }
