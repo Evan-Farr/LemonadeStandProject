@@ -25,6 +25,7 @@ namespace LemonadeStand
             sugarAmount = 2;
             pricePerCup = 2.00;
             GetRecipe();
+            SetLemonadePrice();
         }
 
         public void GetRecipe()

@@ -13,9 +13,6 @@ namespace LemonadeStand
         private double dailyProfitLoss;
         private double runningProfitLoss;
         private int daysOpen;
-        private Lemonade lemonade;
-        private Customer customer;
-        private Day currentDay;
         private Random random;
 
         public Inventory Inventory { get { return inventory; } }

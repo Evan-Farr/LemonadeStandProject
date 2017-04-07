@@ -46,7 +46,18 @@ namespace LemonadeStand
             Console.WriteLine($"Money: ${player1.Store.Money}");
             Console.WriteLine();
         }
-        
+
+        public static void DisplayPurchasePrices(Cup cup, Lemon lemon, Sugar sugar, Ice ice)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Cost to buy:");
+            Console.WriteLine($"Cup: ${cup.Price}");
+            Console.WriteLine($"Lemon: ${lemon.Price}");
+            Console.WriteLine($"Sugar: ${sugar.Price}");
+            Console.WriteLine($"Ice: ${ice.Price}");
+            Console.WriteLine();
+        }
+
         public static void DisplayDailyResults(Player player1, Day currentDay)
         {
             Console.WriteLine();
@@ -56,6 +67,34 @@ namespace LemonadeStand
             Console.WriteLine($">Total Money: ${player1.Store.Money}");
             Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
             Console.WriteLine();
+        }
+
+        public static void RequestNewGame(Game game)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
+            string response = Console.ReadLine().ToLower();
+
+            if (response == "yes")
+            {
+                Console.Clear();
+                game.PlayGame();
+            }
+            else if (response == "no")
+            {
+                Console.Clear();
+                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Hit [Enter] to quite.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("You did not enter a valid input. Please type only 'yes' or 'no' as an answer.");
+                Console.WriteLine();
+                RequestNewGame(game);
+            }
         }
     }
 }

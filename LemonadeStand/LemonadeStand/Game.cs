@@ -9,18 +9,9 @@ namespace LemonadeStand
     public class Game
     {
         public Player player1;
-        private Day currentDay;
-        private double currentScore;
-        private double highScore;
         private string gameMode;
         private Random random;
-        private Cup cup;
-        private Lemon lemon;
-        private Ice ice;
-        private Sugar sugar;
 
-        public double CurrentScore { get { return currentScore; } set { currentScore = value; } }
-        public double HighScore { get { return highScore; } set { highScore = value; } }
         public string GameMode { get { return gameMode; } set { gameMode = value; } }
 
         public void PlayGame()
@@ -30,7 +21,7 @@ namespace LemonadeStand
             GetPlayerName();
             UserInterface.DisplayRules(player1);
             GetGameMode();
-            RequestNewGame();
+            UserInterface.RequestNewGame(new Game());
         }
 
         private void GetPlayerName()
@@ -74,8 +65,10 @@ namespace LemonadeStand
         {
             UserInterface.DisplayCash(player1);
             UserInterface.DisplayInventory(player1);
-            
-            currentDay = new Day(random);
+            RequestInventoryRefill();
+            Day currentDay = new Day(random);
+            Lemonade lemonade = new Lemonade();
+            UserInterface.DisplayDailyResults(player1, currentDay);
         }
 
         private void RunSevenDayGame()
@@ -85,8 +78,6 @@ namespace LemonadeStand
                 Console.WriteLine();
                 Console.WriteLine();
                 RunOneDay();
-                UserInterface.DisplayDailyResults(player1, currentDay);
-                UserInterface.DisplayInventory(player1);
                 player1.Store.DaysOpen += 1;
             }
         }
@@ -108,8 +99,8 @@ namespace LemonadeStand
             if(response == "yes")
             {
                 UserInterface.DisplayInventory(player1);
-                DisplayPurchasePrices();
-                Console.WriteLine("Enter amount for each. If you don't want to buy any of a certain product, enter '0'.");
+                UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
+                Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
                 Console.WriteLine("Cups: ");
                 int cupAmount = int.Parse(Console.ReadLine());
                 if(cupAmount != 0)
@@ -137,48 +128,9 @@ namespace LemonadeStand
             }
         }
 
-        private void DisplayPurchasePrices()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Cost to buy:");
-            Console.WriteLine($"Cup: ${cup.Price}");
-            Console.WriteLine($"Lemon: ${cup.Price}");
-            Console.WriteLine($"Sugar: ${cup.Price}");
-            Console.WriteLine($"Ice: ${cup.Price}");
-            Console.WriteLine();
-        }
-
         private void DisplayEndResults()
         {
 
-        }
-
-        private void RequestNewGame()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
-            string response = Console.ReadLine().ToLower();
-
-            if (response == "yes")
-            {
-                Console.Clear();
-                PlayGame();
-            }
-            else if (response == "no")
-            {
-                Console.Clear();
-                Console.WriteLine("Thanks for playing!");
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Hit [Enter] to quite.");
-            }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine("You did not enter a valid input. Please type only 'yes' or 'no' as an answer.");
-                Console.WriteLine();
-                RequestNewGame();
-            }
         }
     }
 }
