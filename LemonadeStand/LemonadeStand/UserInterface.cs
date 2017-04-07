@@ -52,7 +52,6 @@ namespace LemonadeStand
         public static void DisplayCash(Player player1)
         {
             Console.WriteLine($"Money: ${player1.Store.Money}");
-            Console.WriteLine();
         }
 
         public static void DisplayPurchasePrices(Cup cup, Lemon lemon, Sugar sugar, Ice ice)
@@ -71,7 +70,7 @@ namespace LemonadeStand
             Console.WriteLine();
             Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
             Console.WriteLine($">Profit/Loss: ");
-            Console.WriteLine($">Total Money: ${player1.Store.Money}");
+            Console.WriteLine($">Total Sales: ${currentDay.Sales}");
             Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
             Console.WriteLine();
         }

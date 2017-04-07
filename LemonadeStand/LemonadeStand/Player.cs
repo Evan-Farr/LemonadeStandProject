@@ -21,7 +21,7 @@ namespace LemonadeStand
         public Player(string Name, Random random)
         {
             name = Name;
-            store = new Store(random);
+            store = new Store(random, this);
         }
     }
 }

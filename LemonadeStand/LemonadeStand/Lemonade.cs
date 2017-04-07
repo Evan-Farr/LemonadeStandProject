@@ -56,6 +56,7 @@ namespace LemonadeStand
 
         private void DisplayRecipe()
         {
+            Console.WriteLine();
             Console.WriteLine("Ingredients per cup of Lemonade: ");
             Console.WriteLine($"Lemons: {lemonAmount}");
             Console.WriteLine($"Sugar: {sugarAmount}");

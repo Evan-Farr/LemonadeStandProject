@@ -22,12 +22,13 @@ namespace LemonadeStand
         public double RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }
         public int DaysOpen { get { return daysOpen; } set { daysOpen = value; } }
 
-        public Store(Random Random)
+        public Store(Random Random, Player Player1)
         {
             random = Random;
             inventory = new Inventory();
-            money = 200;
+            money = 500;
             daysOpen = 1;
+            player1 = Player1;
         }
 
         public void RefillInventory()
@@ -143,6 +144,10 @@ namespace LemonadeStand
                     }
                 }
             }
+        }
+        public void UpdateMoney(double sales)
+        {
+            money += sales;
         }
     }
 }

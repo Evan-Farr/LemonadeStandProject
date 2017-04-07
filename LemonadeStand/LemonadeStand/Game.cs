@@ -70,6 +70,7 @@ namespace LemonadeStand
             player1.Store.SellLemonade(currentDay);
             UserInterface.DisplayDailyResults(player1, currentDay);
             player1.Store.DaysOpen += 1;
+            player1.Store.UpdateMoney(currentDay.Sales);
         }
 
         private void RunSevenDayGame()
