@@ -29,40 +29,43 @@ namespace LemonadeStand
             daysOpen = 1;
         }
 
-        public void SellLemonade(Customer customer, Lemonade lemonade, Day currentDay)
+        public void SellLemonade(Lemonade lemonade, Day currentDay)
         {
-            if (customer.MaxWillingToPay < lemonade.PricePerCup)
+            for(int i = 0; i < currentDay.PotentialCustomers.Count; i++)
             {
-                customer.CupsBought = 0;
-            }
-            else if (customer.MaxWillingToPay >= lemonade.PricePerCup)
-            {
-                if (customer.LemonPreference == lemonade.LemonAmount && customer.SugarPreference == lemonade.SugarAmount && customer.IcePreference == lemonade.IceAmount)
+                if (currentDay.PotentialCustomers[i].MaxWillingToPay < lemonade.PricePerCup)
                 {
-                    customer.CupsBought = 3;
-                    currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
-                    currentDay.Customers.Add(customer);
-                    Inventory.RemoveLemons(3 * lemonade.LemonAmount);
-                    Inventory.RemoveSugar(3 * lemonade.SugarAmount);
-                    Inventory.RemoveIce(3 * lemonade.IceAmount);
-                    Inventory.RemoveCups(3);
+                    currentDay.PotentialCustomers[i].CupsBought = 0;
                 }
-                else
+                else if (currentDay.PotentialCustomers[i].MaxWillingToPay >= lemonade.PricePerCup)
                 {
-                    int amount = random.Next(2);
-                    if (amount == 0)
+                    if (currentDay.PotentialCustomers[i].LemonPreference == lemonade.LemonAmount && currentDay.PotentialCustomers[i].SugarPreference == lemonade.SugarAmount && currentDay.PotentialCustomers[i].IcePreference == lemonade.IceAmount)
                     {
-                        customer.CupsBought = 0;
+                        currentDay.PotentialCustomers[i].CupsBought = 3;
+                        currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
+                        currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
+                        Inventory.RemoveLemons(3 * lemonade.LemonAmount);
+                        Inventory.RemoveSugar(3 * lemonade.SugarAmount);
+                        Inventory.RemoveIce(3 * lemonade.IceAmount);
+                        Inventory.RemoveCups(3);
                     }
-                    else if (amount == 1)
+                    else
                     {
-                        customer.CupsBought = 1;
-                        currentDay.Sales += currentDay.Lemonade.PricePerCup;
-                        currentDay.Customers.Add(customer);
-                        Inventory.RemoveLemons(lemonade.LemonAmount);
-                        Inventory.RemoveSugar(lemonade.SugarAmount);
-                        Inventory.RemoveIce(lemonade.IceAmount);
-                        Inventory.RemoveCups(1);
+                        int amount = random.Next(2);
+                        if (amount == 0)
+                        {
+                            currentDay.PotentialCustomers[i].CupsBought = 0;
+                        }
+                        else if (amount == 1)
+                        {
+                            currentDay.PotentialCustomers[i].CupsBought = 1;
+                            currentDay.Sales += currentDay.Lemonade.PricePerCup;
+                            currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
+                            Inventory.RemoveLemons(lemonade.LemonAmount);
+                            Inventory.RemoveSugar(lemonade.SugarAmount);
+                            Inventory.RemoveIce(lemonade.IceAmount);
+                            Inventory.RemoveCups(1);
+                        }
                     }
                 }
             }

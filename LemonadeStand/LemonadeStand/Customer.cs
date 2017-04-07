@@ -41,6 +41,12 @@ namespace LemonadeStand
             return maxWillingToPay;
         }
 
+        private int DetermineChanceOfBuying()
+        {
+            int amount = random.Next(11);
+            return chanceOfBuying;
+        }
+
         private int SetLemonPreference()
         {
             lemonPreference = random.Next(1, 5);
@@ -57,12 +63,6 @@ namespace LemonadeStand
         {
             icePreference = random.Next(1, 10);
             return icePreference;
-        }
-
-        private int DetermineChanceOfBuying()
-        {
-            int amount = random.Next(11);
-            return chanceOfBuying;
         }
     }
 }

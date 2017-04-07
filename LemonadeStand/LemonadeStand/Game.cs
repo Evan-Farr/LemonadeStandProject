@@ -68,7 +68,9 @@ namespace LemonadeStand
             RequestInventoryRefill();
             Day currentDay = new Day(random);
             Lemonade lemonade = new Lemonade();
+            player1.Store.SellLemonade(lemonade, currentDay);
             UserInterface.DisplayDailyResults(player1, currentDay);
+            player1.Store.DaysOpen += 1;
         }
 
         private void RunSevenDayGame()
@@ -78,8 +80,8 @@ namespace LemonadeStand
                 Console.WriteLine();
                 Console.WriteLine();
                 RunOneDay();
-                player1.Store.DaysOpen += 1;
             }
+            DisplayEndResults();
         }
 
         private void RunFourteenDayGame()

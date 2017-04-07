@@ -30,6 +30,7 @@ namespace LemonadeStand
             todaysWeather = new Weather(random);
             customers = new List<Customer>();
             potentialCustomers = new List<Customer>();
+            SetPotentialCustomers();
             sales = 0;
         }
 
