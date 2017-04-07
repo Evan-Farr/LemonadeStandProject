@@ -149,5 +149,15 @@ namespace LemonadeStand
         {
             money += sales;
         }
+
+        public void CalculateDailyProfitLoss()
+        {
+
+        }
+
+        public void CalculateRunningProfitLoss()
+        {
+
+        }
     }
 }

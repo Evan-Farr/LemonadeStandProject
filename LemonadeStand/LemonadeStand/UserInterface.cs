@@ -69,9 +69,10 @@ namespace LemonadeStand
         {
             Console.WriteLine();
             Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
-            Console.WriteLine($">Profit/Loss: ");
             Console.WriteLine($">Total Sales: ${currentDay.Sales}");
             Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
+            Console.WriteLine($">Today's Profit/Loss: ");
+            Console.WriteLine($">Cumulative Profit/Loss: ");
             Console.WriteLine();
         }
 
