@@ -11,6 +11,9 @@ namespace LemonadeStand
         protected double price;
         protected int shelfLife;
 
+        public double Price { get { return price; } set { price = value; } }
+        public int ShelfLife { get { return shelfLife; } set { shelfLife = value; } }
+
         public Product()
         {
         }
@@ -19,9 +22,5 @@ namespace LemonadeStand
         {
             shelfLife -= 1;
         }
-
-        public double Price { get { return shelfLife; } set { price = value; } }
-
-        public int ShelfLife { get { return shelfLife; } set { shelfLife = value; } }
     }
 }

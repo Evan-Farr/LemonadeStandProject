@@ -102,31 +102,40 @@ namespace LemonadeStand
             {
                 UserInterface.DisplayInventory(player1);
                 UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
+                Console.WriteLine();
                 Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
                 Console.WriteLine("Cups: ");
                 int cupAmount = int.Parse(Console.ReadLine());
                 if(cupAmount != 0)
                 {
-                    player1.Store.Inventory.AddCups(cupAmount);
+                    player1.Store.Inventory.AddCups(cupAmount, player1, new Cup());
                 }
+                UserInterface.DisplayCash(player1);
+                Console.WriteLine();
                 Console.WriteLine("Lemons: ");
                 int lemonAmount = int.Parse(Console.ReadLine());
                 if (lemonAmount != 0)
                 {
-                    player1.Store.Inventory.AddLemon(lemonAmount);
+                    player1.Store.Inventory.AddLemon(lemonAmount, player1, new Lemon());
                 }
+                UserInterface.DisplayCash(player1);
+                Console.WriteLine();
                 Console.WriteLine("Sugar: ");
                 int sugarAmount = int.Parse(Console.ReadLine());
                 if (sugarAmount != 0)
                 {
-                    player1.Store.Inventory.AddSugar(sugarAmount);
+                    player1.Store.Inventory.AddSugar(sugarAmount, player1, new Sugar());
                 }
+                UserInterface.DisplayCash(player1);
+                Console.WriteLine();
                 Console.WriteLine("Ice: ");
                 int iceAmount = int.Parse(Console.ReadLine());
                 if (iceAmount != 0)
                 {
-                    player1.Store.Inventory.AddIce(iceAmount);
+                    player1.Store.Inventory.AddIce(iceAmount, player1, new Ice());
                 }
+                UserInterface.DisplayCash(player1);
+                Console.WriteLine();
             }
         }
 

@@ -33,6 +33,7 @@ namespace LemonadeStand
 
         public static void DisplayInventory(Player player1)
         {
+            Console.WriteLine();
             Console.WriteLine("Current Inventory: ");
             Console.WriteLine($"Cups: {player1.Store.Inventory.Cups}");
             Console.WriteLine($"Lemons: {player1.Store.Inventory.Lemons}");

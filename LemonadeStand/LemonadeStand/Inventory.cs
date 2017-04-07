@@ -12,11 +12,7 @@ namespace LemonadeStand
         private List<Sugar> sugarList;
         private List<Ice> iceList;
         private List<Cup> cupsList;
-        private Player player1;
-        private Cup cup;
-        private Lemon lemon;
-        private Ice ice;
-        private Sugar sugar;
+
 
         public int Lemons { get { return lemonsList.Count; } }
         public int Sugar { get { return sugarList.Count; } }
@@ -38,7 +34,7 @@ namespace LemonadeStand
                 lemonsList.RemoveAt(0);
             }
         }
-        public void AddLemon(int amount)
+        public void AddLemon(int amount, Player player1, Lemon lemon)
         {
             for (int i = 0; i < amount; i++)
             {
@@ -54,7 +50,7 @@ namespace LemonadeStand
                 sugarList.RemoveAt(0);
             }
         }
-        public void AddSugar(int amount)
+        public void AddSugar(int amount, Player player1, Sugar sugar)
         {
             for (int i = 0; i < amount; i++)
             {
@@ -70,7 +66,7 @@ namespace LemonadeStand
                 iceList.RemoveAt(0);
             }
         }
-        public void AddIce(int amount)
+        public void AddIce(int amount, Player player1, Ice ice)
         {
             for (int i = 0; i < amount; i++)
             {
@@ -86,7 +82,7 @@ namespace LemonadeStand
                 cupsList.RemoveAt(0);
             }
         }
-        public void AddCups(int amount)
+        public void AddCups(int amount, Player player1, Cup cup)
         {
             for (int i = 0; i < amount; i++)
             {
