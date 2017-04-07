@@ -42,7 +42,6 @@ namespace LemonadeStand
                 money -= (cupAmount * new Cup().Price);
             }
             UserInterface.DisplayCash(player1);
-            Console.WriteLine();
             Console.WriteLine("Lemons: ");
             int lemonAmount = int.Parse(Console.ReadLine());
             if (lemonAmount != 0)
@@ -51,7 +50,6 @@ namespace LemonadeStand
                 money -= (cupAmount * new Lemon().Price);
             }
             UserInterface.DisplayCash(player1);
-            Console.WriteLine();
             Console.WriteLine("Sugar: ");
             int sugarAmount = int.Parse(Console.ReadLine());
             if (sugarAmount != 0)
@@ -60,7 +58,6 @@ namespace LemonadeStand
                 money -= (cupAmount * new Sugar().Price);
             }
             UserInterface.DisplayCash(player1);
-            Console.WriteLine();
             Console.WriteLine("Ice: ");
             int iceAmount = int.Parse(Console.ReadLine());
             if (iceAmount != 0)
@@ -69,7 +66,6 @@ namespace LemonadeStand
                 money -= (cupAmount * new Ice().Price);
             }
             UserInterface.DisplayCash(player1);
-            Console.WriteLine();
             Console.WriteLine("Inventory updated.");
             UserInterface.DisplayInventory(player1);
             Console.WriteLine();
@@ -90,10 +86,26 @@ namespace LemonadeStand
                         currentDay.PotentialCustomers[i].CupsBought = 3;
                         currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
                         currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                        inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount);
-                        inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount);
-                        inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount);
-                        inventory.RemoveCups(3);
+                        if(!inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount))
+                        {
+                            UserInterface.AlertEmptyInventoryItem("lemons");
+                            break;
+                        }
+                        if (!inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount))
+                        {
+                            UserInterface.AlertEmptyInventoryItem("sugar");
+                            break;
+                        }
+                        if (!inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount))
+                        {
+                            UserInterface.AlertEmptyInventoryItem("ice");
+                            break;
+                        }
+                        if (!inventory.RemoveCups(3))
+                        {
+                            UserInterface.AlertEmptyInventoryItem("cups");
+                            break;
+                        }
                     }
                     else
                     {
@@ -107,10 +119,26 @@ namespace LemonadeStand
                             currentDay.PotentialCustomers[i].CupsBought = 1;
                             currentDay.Sales += currentDay.Lemonade.PricePerCup;
                             currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                            inventory.RemoveLemons(currentDay.Lemonade.LemonAmount);
-                            inventory.RemoveSugar(currentDay.Lemonade.SugarAmount);
-                            inventory.RemoveIce(currentDay.Lemonade.IceAmount);
-                            inventory.RemoveCups(1);
+                            if (!inventory.RemoveLemons(currentDay.Lemonade.LemonAmount))
+                            {
+                                UserInterface.AlertEmptyInventoryItem("lemons");
+                                break;
+                            }
+                            if (!inventory.RemoveSugar(currentDay.Lemonade.SugarAmount))
+                            {
+                                UserInterface.AlertEmptyInventoryItem("sugar");
+                                break;
+                            }
+                            if (!inventory.RemoveIce(currentDay.Lemonade.IceAmount))
+                            {
+                                UserInterface.AlertEmptyInventoryItem("ice");
+                                break;
+                            }
+                            if (!inventory.RemoveCups(1))
+                            {
+                                UserInterface.AlertEmptyInventoryItem("cups");
+                                break;
+                            }
                         }
                     }
                 }

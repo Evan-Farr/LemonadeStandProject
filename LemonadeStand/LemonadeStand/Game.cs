@@ -85,21 +85,41 @@ namespace LemonadeStand
 
         private void RunFourteenDayGame()
         {
-
+            while (player1.Store.DaysOpen != 15)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                RunOneDay();
+            }
+            DisplayEndResults();
         }
 
         private void RunTwentyOneDayGame()
         {
-
+            while (player1.Store.DaysOpen != 22)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                RunOneDay();
+            }
+            DisplayEndResults();
         }
 
         private void RequestInventoryRefill()
         {
             Console.WriteLine("Do you want to re-fill your inventory? Enter 'yes' or 'no': ");
-            string response = Console.ReadLine();
+            string response = Console.ReadLine().ToLower();
             if(response == "yes")
             {
                 player1.Store.RefillInventory();
+            }else if(response == "no")
+            {
+
+            }else if (response != "yes" && response != "no")
+            {
+                Console.WriteLine("You did not enter a valid response. Please enter only 'yes' or 'no' as a response.");
+                Console.WriteLine();
+                RequestInventoryRefill();
             }
         }
 

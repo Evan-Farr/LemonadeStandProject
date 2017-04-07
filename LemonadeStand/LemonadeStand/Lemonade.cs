@@ -67,7 +67,7 @@ namespace LemonadeStand
         {
             Console.WriteLine($"Default price per cup of lemonade: ${pricePerCup}");
             Console.WriteLine("Would you like to change this price? Enter 'yes' or 'no'.");
-            string alter = Console.ReadLine();
+            string alter = Console.ReadLine().ToLower();
 
             if (alter == "yes")
             {

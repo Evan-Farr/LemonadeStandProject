@@ -18,7 +18,7 @@ namespace LemonadeStand
         {
         }
 
-        public void Spoil()
+        public virtual void Spoil()
         {
             shelfLife -= 1;
         }

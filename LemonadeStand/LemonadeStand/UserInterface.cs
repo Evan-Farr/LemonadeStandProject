@@ -42,15 +42,10 @@ namespace LemonadeStand
             Console.WriteLine();
         }
 
-        public static void AlertEmptyInventoryItem(Player player1, Day currentDay)
+        public static void AlertEmptyInventoryItem(string product)
         {
-            Console.WriteLine("This day ended early because you ran out of something in your inventory!");
-            Console.WriteLine("Make sure you have enough ingredients before starting each day.");
-            Console.WriteLine();
-            Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
-            Console.WriteLine($"Profit/Loss: ");
-            Console.WriteLine($">Total Money: ${player1.Store.Money}");
-            Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
+            Console.WriteLine($"This day ended early because you ran out of {product} in your inventory!");
+            Console.WriteLine("Make sure you have enough of each ingredient before starting a new day.");
             Console.WriteLine();
         }
 
@@ -74,9 +69,8 @@ namespace LemonadeStand
         public static void DisplayDailyResults(Player player1, Day currentDay)
         {
             Console.WriteLine();
-            Console.WriteLine("THIS DAY IS DONE!");
             Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
-            Console.WriteLine($"Profit/Loss: ");
+            Console.WriteLine($">Profit/Loss: ");
             Console.WriteLine($">Total Money: ${player1.Store.Money}");
             Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
             Console.WriteLine();
