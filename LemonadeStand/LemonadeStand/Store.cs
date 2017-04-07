@@ -14,6 +14,7 @@ namespace LemonadeStand
         private double runningProfitLoss;
         private int daysOpen;
         private Random random;
+        private Player player1;
 
         public Inventory Inventory { get { return inventory; } }
         public double Money { get { return money; } set { money = value; } }
@@ -37,7 +38,8 @@ namespace LemonadeStand
             int cupAmount = int.Parse(Console.ReadLine());
             if (cupAmount != 0)
             {
-                Inventory.AddCups(cupAmount);
+                inventory.AddCups(cupAmount);
+                money -= (cupAmount * new Cup().Price);
             }
             UserInterface.DisplayCash(player1);
             Console.WriteLine();
@@ -45,7 +47,8 @@ namespace LemonadeStand
             int lemonAmount = int.Parse(Console.ReadLine());
             if (lemonAmount != 0)
             {
-                player1.Store.Inventory.AddLemon(lemonAmount, player1, new Lemon());
+                inventory.AddLemon(lemonAmount);
+                money -= (cupAmount * new Lemon().Price);
             }
             UserInterface.DisplayCash(player1);
             Console.WriteLine();
@@ -53,7 +56,8 @@ namespace LemonadeStand
             int sugarAmount = int.Parse(Console.ReadLine());
             if (sugarAmount != 0)
             {
-                player1.Store.Inventory.AddSugar(sugarAmount, player1, new Sugar());
+                inventory.AddSugar(sugarAmount);
+                money -= (cupAmount * new Sugar().Price);
             }
             UserInterface.DisplayCash(player1);
             Console.WriteLine();
@@ -61,14 +65,15 @@ namespace LemonadeStand
             int iceAmount = int.Parse(Console.ReadLine());
             if (iceAmount != 0)
             {
-                player1.Store.Inventory.AddIce(iceAmount, player1, new Ice());
+                inventory.AddIce(iceAmount);
+                money -= (cupAmount * new Ice().Price);
             }
             UserInterface.DisplayCash(player1);
             Console.WriteLine();
+            Console.WriteLine("Inventory updated.");
             UserInterface.DisplayInventory(player1);
             Console.WriteLine();
         }
-    }
 
         public void SellLemonade(Day currentDay)
         {
@@ -85,10 +90,10 @@ namespace LemonadeStand
                         currentDay.PotentialCustomers[i].CupsBought = 3;
                         currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
                         currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                        Inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount);
-                        Inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount);
-                        Inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount);
-                        Inventory.RemoveCups(3);
+                        inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount);
+                        inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount);
+                        inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount);
+                        inventory.RemoveCups(3);
                     }
                     else
                     {
@@ -102,10 +107,10 @@ namespace LemonadeStand
                             currentDay.PotentialCustomers[i].CupsBought = 1;
                             currentDay.Sales += currentDay.Lemonade.PricePerCup;
                             currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                            Inventory.RemoveLemons(currentDay.Lemonade.LemonAmount);
-                            Inventory.RemoveSugar(currentDay.Lemonade.SugarAmount);
-                            Inventory.RemoveIce(currentDay.Lemonade.IceAmount);
-                            Inventory.RemoveCups(1);
+                            inventory.RemoveLemons(currentDay.Lemonade.LemonAmount);
+                            inventory.RemoveSugar(currentDay.Lemonade.SugarAmount);
+                            inventory.RemoveIce(currentDay.Lemonade.IceAmount);
+                            inventory.RemoveCups(1);
                         }
                     }
                 }
