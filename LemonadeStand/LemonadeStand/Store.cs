@@ -150,14 +150,41 @@ namespace LemonadeStand
             money += sales;
         }
 
-        public void CalculateDailyProfitLoss()
+        public void CalculateDailyProfitLoss(double dailySales)
         {
-
+            if(daysOpen == 1)
+            {
+                if (money < 500)
+                {
+                    dailyProfitLoss = 500 - money;
+                }
+                else if (money > 500)
+                {
+                    dailyProfitLoss = dailySales;
+               }
+            }else
+            {
+                if (money < 500)
+                {
+                    dailyProfitLoss = 500 - money;
+                }
+                else if (money > 500)
+                {
+                    dailyProfitLoss = ((money + dailySales) - 500);
+                }
+            }
         }
 
-        public void CalculateRunningProfitLoss()
+        public void CalculateRunningProfitLoss(double dailySales)
         {
-
+            if (money < 500)
+            {
+                runningProfitLoss = 500 - money;
+            }
+            else if (money > 500)
+            {
+                runningProfitLoss = ((money + dailySales) - 500);
+            }
         }
     }
 }
