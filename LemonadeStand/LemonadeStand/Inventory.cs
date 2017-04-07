@@ -13,7 +13,10 @@ namespace LemonadeStand
         private List<Ice> iceList;
         private List<Cup> cupsList;
 
-
+        public List<Lemon> LemonsList { get { return lemonsList; } set { lemonsList = value; } }
+        public List<Sugar> SugarList { get { return sugarList; } set { sugarList = value; } }
+        public List<Ice> IceList { get { return iceList; } set { iceList = value; } }
+        public List<Cup> CupsList { get { return cupsList; } set { cupsList = value; } }
         public int Lemons { get { return lemonsList.Count; } }
         public int Sugar { get { return sugarList.Count; } }
         public int Ice { get { return iceList.Count; } }
@@ -31,30 +34,36 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                lemonsList.RemoveAt(0);
+                LemonsList.RemoveAt(0);
             }
         }
-        public void AddLemon(int amount, Player player1, Lemon lemon)
+        public void AddLemon(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                lemonsList.Add(new Lemon());
+               LemonsList.Add(new Lemon());
             }
-            player1.Store.Money -= (amount * lemon.Price);
         }
 
         public void RemoveSugar(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                sugarList.RemoveAt(0);
+                if(SugarList.Count != 0)
+                {
+                    SugarList.RemoveAt(0);
+                }else
+                {
+                    UserInterface.AlertEmptyInventoryItem(player1, currentDay);
+                }
+                
             }
         }
-        public void AddSugar(int amount, Player player1, Sugar sugar)
+        public void AddSugar(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                sugarList.Add(new Sugar());
+                SugarList.Add(new Sugar());
             }
             player1.Store.Money -= (amount * sugar.Price);
         }
@@ -63,14 +72,14 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                iceList.RemoveAt(0);
+                IceList.RemoveAt(0);
             }
         }
-        public void AddIce(int amount, Player player1, Ice ice)
+        public void AddIce(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                iceList.Add(new Ice());
+                IceList.Add(new Ice());
             }
             player1.Store.Money -= (amount * ice.Price);
         }
@@ -79,14 +88,14 @@ namespace LemonadeStand
         {
             for (int i = 0; i < amount; i++)
             {
-                cupsList.RemoveAt(0);
+                CupsList.RemoveAt(0);
             }
         }
-        public void AddCups(int amount, Player player1, Cup cup)
+        public void AddCups(int amount)
         {
             for (int i = 0; i < amount; i++)
             {
-                cupsList.Add(new Cup());
+                CupsList.Add(new Cup());
             }
             player1.Store.Money -= (amount * cup.Price);
         }

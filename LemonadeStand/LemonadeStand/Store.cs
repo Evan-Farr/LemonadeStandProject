@@ -29,24 +29,65 @@ namespace LemonadeStand
             daysOpen = 1;
         }
 
-        public void SellLemonade(Lemonade lemonade, Day currentDay)
+        public void RefillInventory()
+        {
+            UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
+            Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
+            Console.WriteLine("Cups: ");
+            int cupAmount = int.Parse(Console.ReadLine());
+            if (cupAmount != 0)
+            {
+                Inventory.AddCups(cupAmount);
+            }
+            UserInterface.DisplayCash(player1);
+            Console.WriteLine();
+            Console.WriteLine("Lemons: ");
+            int lemonAmount = int.Parse(Console.ReadLine());
+            if (lemonAmount != 0)
+            {
+                player1.Store.Inventory.AddLemon(lemonAmount, player1, new Lemon());
+            }
+            UserInterface.DisplayCash(player1);
+            Console.WriteLine();
+            Console.WriteLine("Sugar: ");
+            int sugarAmount = int.Parse(Console.ReadLine());
+            if (sugarAmount != 0)
+            {
+                player1.Store.Inventory.AddSugar(sugarAmount, player1, new Sugar());
+            }
+            UserInterface.DisplayCash(player1);
+            Console.WriteLine();
+            Console.WriteLine("Ice: ");
+            int iceAmount = int.Parse(Console.ReadLine());
+            if (iceAmount != 0)
+            {
+                player1.Store.Inventory.AddIce(iceAmount, player1, new Ice());
+            }
+            UserInterface.DisplayCash(player1);
+            Console.WriteLine();
+            UserInterface.DisplayInventory(player1);
+            Console.WriteLine();
+        }
+    }
+
+        public void SellLemonade(Day currentDay)
         {
             for(int i = 0; i < currentDay.PotentialCustomers.Count; i++)
             {
-                if (currentDay.PotentialCustomers[i].MaxWillingToPay < lemonade.PricePerCup)
+                if (currentDay.PotentialCustomers[i].MaxWillingToPay < currentDay.Lemonade.PricePerCup)
                 {
                     currentDay.PotentialCustomers[i].CupsBought = 0;
                 }
-                else if (currentDay.PotentialCustomers[i].MaxWillingToPay >= lemonade.PricePerCup)
+                else if (currentDay.PotentialCustomers[i].MaxWillingToPay >= currentDay.Lemonade.PricePerCup)
                 {
-                    if (currentDay.PotentialCustomers[i].LemonPreference == lemonade.LemonAmount && currentDay.PotentialCustomers[i].SugarPreference == lemonade.SugarAmount && currentDay.PotentialCustomers[i].IcePreference == lemonade.IceAmount)
+                    if (currentDay.PotentialCustomers[i].LemonPreference == currentDay.Lemonade.LemonAmount && currentDay.PotentialCustomers[i].SugarPreference == currentDay.Lemonade.SugarAmount && currentDay.PotentialCustomers[i].IcePreference == currentDay.Lemonade.IceAmount)
                     {
                         currentDay.PotentialCustomers[i].CupsBought = 3;
                         currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
                         currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                        Inventory.RemoveLemons(3 * lemonade.LemonAmount);
-                        Inventory.RemoveSugar(3 * lemonade.SugarAmount);
-                        Inventory.RemoveIce(3 * lemonade.IceAmount);
+                        Inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount);
+                        Inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount);
+                        Inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount);
                         Inventory.RemoveCups(3);
                     }
                     else
@@ -61,9 +102,9 @@ namespace LemonadeStand
                             currentDay.PotentialCustomers[i].CupsBought = 1;
                             currentDay.Sales += currentDay.Lemonade.PricePerCup;
                             currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                            Inventory.RemoveLemons(lemonade.LemonAmount);
-                            Inventory.RemoveSugar(lemonade.SugarAmount);
-                            Inventory.RemoveIce(lemonade.IceAmount);
+                            Inventory.RemoveLemons(currentDay.Lemonade.LemonAmount);
+                            Inventory.RemoveSugar(currentDay.Lemonade.SugarAmount);
+                            Inventory.RemoveIce(currentDay.Lemonade.IceAmount);
                             Inventory.RemoveCups(1);
                         }
                     }

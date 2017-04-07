@@ -21,7 +21,7 @@ namespace LemonadeStand
         public int SugarPreference { get { return sugarPreference; } }
         public int IcePreference { get { return icePreference; } }
         public int ChanceOfBuying { get { return chanceOfBuying; } }
-        public int CupsBought { get { return cupsBought; } set { CupsBought = value; } }
+        public int CupsBought { get { return cupsBought; } set { cupsBought = value; } }
 
         public Customer(Random Random)
         {

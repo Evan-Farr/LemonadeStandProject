@@ -20,7 +20,7 @@ namespace LemonadeStand
         public Weather TodaysWeather { get { return todaysWeather; } }
         public Lemonade Lemonade { get { return lemonade; } }
         public int TotalCustomers { get { return customers.Count; } }
-        public List<Customer> Customers { get { return customers; } }
+        public List<Customer> Customers { get { return customers; } set { customers = value; } }
         public List<Customer> PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }
         public double Sales { get { return sales; } set { sales = value; } }
 
@@ -31,6 +31,7 @@ namespace LemonadeStand
             customers = new List<Customer>();
             potentialCustomers = new List<Customer>();
             SetPotentialCustomers();
+            lemonade = new Lemonade();
             sales = 0;
         }
 

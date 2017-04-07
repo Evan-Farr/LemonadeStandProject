@@ -67,8 +67,7 @@ namespace LemonadeStand
             UserInterface.DisplayInventory(player1);
             RequestInventoryRefill();
             Day currentDay = new Day(random);
-            Lemonade lemonade = new Lemonade();
-            player1.Store.SellLemonade(lemonade, currentDay);
+            player1.Store.SellLemonade(currentDay, player1);
             UserInterface.DisplayDailyResults(player1, currentDay);
             player1.Store.DaysOpen += 1;
         }
@@ -100,7 +99,6 @@ namespace LemonadeStand
             string response = Console.ReadLine();
             if(response == "yes")
             {
-                UserInterface.DisplayInventory(player1);
                 UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
                 Console.WriteLine();
                 Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
@@ -135,6 +133,8 @@ namespace LemonadeStand
                     player1.Store.Inventory.AddIce(iceAmount, player1, new Ice());
                 }
                 UserInterface.DisplayCash(player1);
+                Console.WriteLine();
+                UserInterface.DisplayInventory(player1);
                 Console.WriteLine();
             }
         }
