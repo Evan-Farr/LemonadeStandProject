@@ -9,7 +9,7 @@ namespace LemonadeStand
     public class Game
     {
         public Player player1;
-        public Day day;
+        private Day currentDay;
         private double currentScore;
         private double highScore;
         private string gameMode;
@@ -26,19 +26,11 @@ namespace LemonadeStand
         public void PlayGame()
         {
             random = new Random();
-            DisplayPremise();
+            UserInterface.DisplayPremise();
             GetPlayerName();
-            DisplayRules();
+            UserInterface.DisplayRules(player1);
             GetGameMode();
             RequestNewGame();
-        }
-
-        private void DisplayPremise()
-        {
-            Console.WriteLine("So you wanna get into the Lemonade Stand racquette?");
-            Console.WriteLine("Well then, just a heads-up....");
-            Console.WriteLine("Just because little Jimmy down the street is making a killing doesn't mean you will!");
-            Console.WriteLine();
         }
 
         private void GetPlayerName()
@@ -47,21 +39,6 @@ namespace LemonadeStand
             Console.WriteLine("First, before I can give you a stand, I'll need to know your name.");
             Console.WriteLine("Enter your name: ");
             player1.Name = Console.ReadLine();
-            Console.WriteLine();
-        }
-
-        private void DisplayRules()
-        {
-            Console.WriteLine($"Ok {player1.Name}, here's how this works...");
-            Console.WriteLine("Your goal is to make as much money as you can in 7, 14 or 21 days by selling lemonade at your new stand.");
-            Console.WriteLine("You'll need to buy cups, lemons, sugar and ice to keep your inventory full.");
-            Console.WriteLine("You start with $200 and an empty inventory.");
-            Console.WriteLine("You set the price and recipe, which should be based on the weather and customer buying habits.");
-            Console.WriteLine("It's recommended to begin using the pre-built recipe to get the hang of it, then vary from there.");
-            Console.WriteLine("Then, set your price and start selling some lemonade!");
-            Console.WriteLine("At the end of the game, you'll see how much money you made. That profit or loss is your score.");
-            Console.WriteLine("Then, play again and again until your highscore is impossible for your friends to beat!");
-            Console.WriteLine();
             Console.WriteLine();
         }
 
@@ -81,7 +58,7 @@ namespace LemonadeStand
             {
                 RunFourteenDayGame();
             }
-            else if (gameMode == "2")
+            else if (gameMode == "3")
             {
                 RunTwentyOneDayGame();
             }
@@ -95,10 +72,10 @@ namespace LemonadeStand
 
         private void RunOneDay()
         {
-            DisplayCash();
-            DisplayInventory();
+            UserInterface.DisplayCash(player1);
+            UserInterface.DisplayInventory(player1);
             
-            day = new Day(random);
+            currentDay = new Day(random);
         }
 
         private void RunSevenDayGame()
@@ -108,8 +85,8 @@ namespace LemonadeStand
                 Console.WriteLine();
                 Console.WriteLine();
                 RunOneDay();
-                DisplayDailyResults();
-                DisplayInventory();
+                UserInterface.DisplayDailyResults(player1, currentDay);
+                UserInterface.DisplayInventory(player1);
                 player1.Store.DaysOpen += 1;
             }
         }
@@ -124,39 +101,13 @@ namespace LemonadeStand
 
         }
 
-        private void DisplayDailyResults()
-        {
-            Console.WriteLine();
-            Console.WriteLine("THIS DAY IS DONE!");
-            Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
-            Console.WriteLine($"Profit/Loss: ");
-            Console.WriteLine($">Total Money: ${player1.Store.Money}");
-            Console.WriteLine($">Customers: {day.TotalCustomers}");
-            Console.WriteLine();
-        }
-        private void DisplayCash()
-        {
-            Console.WriteLine($"Money: ${player1.Store.Money}");
-            Console.WriteLine();
-        }
-
-        private void DisplayInventory()
-        {
-            Console.WriteLine("Current Inventory: ");
-            Console.WriteLine($"Cups: {player1.Store.Inventory.Cups}");
-            Console.WriteLine($"Lemons: {player1.Store.Inventory.Lemons}");
-            Console.WriteLine($"Sugar: {player1.Store.Inventory.Sugar}");
-            Console.WriteLine($"Ice: {player1.Store.Inventory.Ice}");
-            Console.WriteLine();
-        }
-
         private void RequestInventoryRefill()
         {
             Console.WriteLine("Do you want to re-fill your inventory? Enter 'yes' or 'no': ");
             string response = Console.ReadLine();
             if(response == "yes")
             {
-                DisplayInventory();
+                UserInterface.DisplayInventory(player1);
                 DisplayPurchasePrices();
                 Console.WriteLine("Enter amount for each. If you don't want to buy any of a certain product, enter '0'.");
                 Console.WriteLine("Cups: ");
@@ -164,6 +115,24 @@ namespace LemonadeStand
                 if(cupAmount != 0)
                 {
                     player1.Store.Inventory.AddCups(cupAmount);
+                }
+                Console.WriteLine("Lemons: ");
+                int lemonAmount = int.Parse(Console.ReadLine());
+                if (lemonAmount != 0)
+                {
+                    player1.Store.Inventory.AddLemon(lemonAmount);
+                }
+                Console.WriteLine("Sugar: ");
+                int sugarAmount = int.Parse(Console.ReadLine());
+                if (sugarAmount != 0)
+                {
+                    player1.Store.Inventory.AddSugar(sugarAmount);
+                }
+                Console.WriteLine("Ice: ");
+                int iceAmount = int.Parse(Console.ReadLine());
+                if (iceAmount != 0)
+                {
+                    player1.Store.Inventory.AddIce(iceAmount);
                 }
             }
         }
