@@ -115,7 +115,7 @@ namespace LemonadeStand
                 player1.Store.RefillInventory();
             }else if(response == "no")
             {
-
+                Console.WriteLine();
             }else if (response != "yes" && response != "no")
             {
                 Console.WriteLine("You did not enter a valid response. Please enter only 'yes' or 'no' as a response.");

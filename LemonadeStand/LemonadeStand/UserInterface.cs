@@ -51,7 +51,7 @@ namespace LemonadeStand
 
         public static void DisplayCash(Player player1)
         {
-            Console.WriteLine($"Money: ${player1.Store.Money}");
+            Console.WriteLine($"Your Money: ${player1.Store.Money}");
         }
 
         public static void DisplayPurchasePrices(Cup cup, Lemon lemon, Sugar sugar, Ice ice)
