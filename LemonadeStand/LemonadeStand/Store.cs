@@ -33,7 +33,7 @@ namespace LemonadeStand
             player1 = Player1;
         }
 
-        public void RefillInventory()
+        public void RefillInventory(Day currentDay)
         {
             dailyExpenses = 0;
             UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
@@ -43,7 +43,11 @@ namespace LemonadeStand
             if (cupAmount != 0)
             {
                 inventory.AddCups(cupAmount);
+<<<<<<< HEAD
                 dailyExpenses += (cupAmount * new Cup().Price);
+=======
+                currentDay.DailyExpenses += (cupAmount * new Cup().Price);
+>>>>>>> 0cea48210471ebe7147af7a21dc5a5868208c7ad
                 money -= (cupAmount * new Cup().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -157,9 +161,13 @@ namespace LemonadeStand
             money += sales;
         }
 
-        public void CalculateDailyProfitLoss(double dailySales)
+        public void CalculateDailyProfitLoss(double dailySales, Day currentDay)
         {
+<<<<<<< HEAD
             dailyProfitLoss = dailySales - dailyExpenses;
+=======
+            dailyProfitLoss = dailySales - currentDay.DailyExpenses;
+>>>>>>> 0cea48210471ebe7147af7a21dc5a5868208c7ad
         }
 
         public void CalculateRunningProfitLoss(double dailySales)
