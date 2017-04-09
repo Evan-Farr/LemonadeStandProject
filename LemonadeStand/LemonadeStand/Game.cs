@@ -66,8 +66,11 @@ namespace LemonadeStand
             UserInterface.DisplayCash(player1);
             UserInterface.DisplayInventory(player1);
             Day currentDay = new Day(random);
-            RequestInventoryRefill(currentDay);
-            player1.Store.SellLemonade(currentDay);
+            RequestInventoryRefill();
+            Lemonade recipe = new Lemonade();
+            player1.Store.SellLemonade(currentDay, recipe);
+            player1.Store.CalculateDailyProfitLoss(currentDay.Sales);
+            player1.Store.CalculateRunningProfitLoss(currentDay.Sales);
             UserInterface.DisplayDailyResults(player1, currentDay);
             player1.Store.DaysOpen += 1;
             player1.Store.UpdateMoney(currentDay.Sales);
@@ -106,13 +109,13 @@ namespace LemonadeStand
             DisplayEndResults();
         }
 
-        private void RequestInventoryRefill(Day currentDay)
+        private void RequestInventoryRefill()
         {
             Console.WriteLine("Do you want to re-fill your inventory? Enter 'yes' or 'no': ");
             string response = Console.ReadLine().ToLower();
             if(response == "yes")
             {
-                player1.Store.RefillInventory(currentDay);
+                player1.Store.RefillInventory();
             }else if(response == "no")
             {
                 Console.WriteLine();
@@ -120,7 +123,7 @@ namespace LemonadeStand
             {
                 Console.WriteLine("You did not enter a valid response. Please enter only 'yes' or 'no' as a response.");
                 Console.WriteLine();
-                RequestInventoryRefill(currentDay);
+                RequestInventoryRefill();
             }
         }
 

@@ -44,6 +44,7 @@ namespace LemonadeStand
 
         public static void AlertEmptyInventoryItem(string product)
         {
+            Console.WriteLine();
             Console.WriteLine($"This day ended early because you ran out of {product} in your inventory!");
             Console.WriteLine("Make sure you have enough of each ingredient before starting a new day.");
             Console.WriteLine();
@@ -74,10 +75,10 @@ namespace LemonadeStand
             Console.WriteLine($">Today's Profit/Loss: {player1.Store.DailyProfitLoss}");
             if(player1.Store.Money < 500)
             {
-                Console.WriteLine($">Cumulative Profit/Loss: -{player1.Store.RunningProfitLoss}");
+                Console.WriteLine($">Cumulative Profit/Loss: - ${player1.Store.RunningProfitLoss}");
             }else if(player1.Store.Money > 500)
             {
-                Console.WriteLine($">Cumulative Profit/Loss: +{player1.Store.RunningProfitLoss}");
+                Console.WriteLine($">Cumulative Profit/Loss: + ${player1.Store.RunningProfitLoss}");
             }
             Console.WriteLine();
         }

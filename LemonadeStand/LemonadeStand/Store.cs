@@ -33,7 +33,7 @@ namespace LemonadeStand
             player1 = Player1;
         }
 
-        public void RefillInventory(Day currentDay)
+        public void RefillInventory()
         {
             dailyExpenses = 0;
             UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
@@ -43,11 +43,7 @@ namespace LemonadeStand
             if (cupAmount != 0)
             {
                 inventory.AddCups(cupAmount);
-<<<<<<< HEAD
                 dailyExpenses += (cupAmount * new Cup().Price);
-=======
-                currentDay.DailyExpenses += (cupAmount * new Cup().Price);
->>>>>>> 0cea48210471ebe7147af7a21dc5a5868208c7ad
                 money -= (cupAmount * new Cup().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -83,32 +79,32 @@ namespace LemonadeStand
             Console.WriteLine();
         }
 
-        public void SellLemonade(Day currentDay)
+        public void SellLemonade(Day currentDay, Lemonade lemonade)
         {
             for(int i = 0; i < currentDay.PotentialCustomers.Count; i++)
             {
-                if (currentDay.PotentialCustomers[i].MaxWillingToPay < currentDay.Lemonade.PricePerCup)
+                if (currentDay.PotentialCustomers[i].MaxWillingToPay < lemonade.PricePerCup)
                 {
                     currentDay.PotentialCustomers[i].CupsBought = 0;
                 }
-                else if (currentDay.PotentialCustomers[i].MaxWillingToPay >= currentDay.Lemonade.PricePerCup)
+                else if (currentDay.PotentialCustomers[i].MaxWillingToPay >= lemonade.PricePerCup)
                 {
-                    if (currentDay.PotentialCustomers[i].LemonPreference == currentDay.Lemonade.LemonAmount && currentDay.PotentialCustomers[i].SugarPreference == currentDay.Lemonade.SugarAmount && currentDay.PotentialCustomers[i].IcePreference == currentDay.Lemonade.IceAmount)
+                    if (currentDay.PotentialCustomers[i].LemonPreference == lemonade.LemonAmount && currentDay.PotentialCustomers[i].SugarPreference == lemonade.SugarAmount && currentDay.PotentialCustomers[i].IcePreference == lemonade.IceAmount)
                     {
                         currentDay.PotentialCustomers[i].CupsBought = 3;
-                        currentDay.Sales += (3 * currentDay.Lemonade.PricePerCup);
+                        currentDay.Sales += (3 * lemonade.PricePerCup);
                         currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                        if(!inventory.RemoveLemons(3 * currentDay.Lemonade.LemonAmount))
+                        if(!inventory.RemoveLemons(3 * lemonade.LemonAmount))
                         {
                             UserInterface.AlertEmptyInventoryItem("lemons");
                             break;
                         }
-                        if (!inventory.RemoveSugar(3 * currentDay.Lemonade.SugarAmount))
+                        if (!inventory.RemoveSugar(3 * lemonade.SugarAmount))
                         {
                             UserInterface.AlertEmptyInventoryItem("sugar");
                             break;
                         }
-                        if (!inventory.RemoveIce(3 * currentDay.Lemonade.IceAmount))
+                        if (!inventory.RemoveIce(3 * lemonade.IceAmount))
                         {
                             UserInterface.AlertEmptyInventoryItem("ice");
                             break;
@@ -129,19 +125,19 @@ namespace LemonadeStand
                         else if (amount == 1)
                         {
                             currentDay.PotentialCustomers[i].CupsBought = 1;
-                            currentDay.Sales += currentDay.Lemonade.PricePerCup;
+                            currentDay.Sales += lemonade.PricePerCup;
                             currentDay.Customers.Add(currentDay.PotentialCustomers[i]);
-                            if (!inventory.RemoveLemons(currentDay.Lemonade.LemonAmount))
+                            if (!inventory.RemoveLemons(lemonade.LemonAmount))
                             {
                                 UserInterface.AlertEmptyInventoryItem("lemons");
                                 break;
                             }
-                            if (!inventory.RemoveSugar(currentDay.Lemonade.SugarAmount))
+                            if (!inventory.RemoveSugar(lemonade.SugarAmount))
                             {
                                 UserInterface.AlertEmptyInventoryItem("sugar");
                                 break;
                             }
-                            if (!inventory.RemoveIce(currentDay.Lemonade.IceAmount))
+                            if (!inventory.RemoveIce(lemonade.IceAmount))
                             {
                                 UserInterface.AlertEmptyInventoryItem("ice");
                                 break;
@@ -161,13 +157,9 @@ namespace LemonadeStand
             money += sales;
         }
 
-        public void CalculateDailyProfitLoss(double dailySales, Day currentDay)
+        public void CalculateDailyProfitLoss(double dailySales)
         {
-<<<<<<< HEAD
             dailyProfitLoss = dailySales - dailyExpenses;
-=======
-            dailyProfitLoss = dailySales - currentDay.DailyExpenses;
->>>>>>> 0cea48210471ebe7147af7a21dc5a5868208c7ad
         }
 
         public void CalculateRunningProfitLoss(double dailySales)

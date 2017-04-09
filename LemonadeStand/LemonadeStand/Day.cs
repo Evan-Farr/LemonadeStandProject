@@ -12,18 +12,16 @@ namespace LemonadeStand
         private Weather todaysWeather;
         private List<Customer> customers;
         private List<Customer> potentialCustomers;
-        private Lemonade lemonade;
+        //private Lemonade lemonade;
         private double sales;
         private Random random;
-        private double dailyExpenses;
 
         public Weather TodaysWeather { get { return todaysWeather; } }
-        public Lemonade Lemonade { get { return lemonade; } }
+        //public Lemonade Lemonade { get { return lemonade; } }
         public int TotalCustomers { get { return customers.Count; } }
         public List<Customer> Customers { get { return customers; } set { customers = value; } }
         public List<Customer> PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }
         public double Sales { get { return sales; } set { sales = value; } }
-        public double DailyExpenses { get { return dailyExpenses; } set { dailyExpenses = value; } }
 
         public Day(Random Random)
         {
@@ -32,9 +30,8 @@ namespace LemonadeStand
             customers = new List<Customer>();
             potentialCustomers = new List<Customer>();
             SetPotentialCustomers();
-            lemonade = new Lemonade();
+            //lemonade = new Lemonade();
             sales = 0;
-            dailyExpenses = 0;
         }
 
         private void SetPotentialCustomers()
