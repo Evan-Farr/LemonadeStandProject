@@ -35,48 +35,102 @@ namespace LemonadeStand
 
         public void RefillInventory()
         {
-            dailyExpenses = 0;
             UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
             Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
+            RefillCups();
+            UserInterface.DisplayCash(player1);
+            RefillLemons();
+            UserInterface.DisplayCash(player1);
+            RefillSugar();
+            UserInterface.DisplayCash(player1);
+            RefillIce();
+            UserInterface.DisplayCash(player1);
+            Console.WriteLine();
+            Console.WriteLine("Inventory updated.");
+            UserInterface.DisplayInventory(player1);
+            Console.WriteLine();
+        }
+
+        private void RefillCups()
+        {
             Console.WriteLine("Cups: ");
             int cupAmount = int.Parse(Console.ReadLine());
             if (cupAmount != 0)
             {
-                inventory.AddCups(cupAmount);
-                dailyExpenses += (cupAmount * new Cup().Price);
-                money -= (cupAmount * new Cup().Price);
+                if ((cupAmount * new Cup().Price) > player1.Store.Money)
+                {
+                    Console.WriteLine("You don't have enough money to buy that many cups. Please try again.");
+                    UserInterface.DisplayCash(player1);
+                    RefillCups();
+                }
+                else
+                {
+                    inventory.AddCups(cupAmount);
+                    dailyExpenses += (cupAmount * new Cup().Price);
+                    money -= (cupAmount * new Cup().Price);
+                }
             }
-            UserInterface.DisplayCash(player1);
+        }
+
+        private void RefillLemons()
+        {
             Console.WriteLine("Lemons: ");
             int lemonAmount = int.Parse(Console.ReadLine());
             if (lemonAmount != 0)
             {
-                inventory.AddLemon(lemonAmount);
-                dailyExpenses += (lemonAmount * new Cup().Price);
-                money -= (cupAmount * new Lemon().Price);
+                if ((lemonAmount * new Lemon().Price) > player1.Store.Money)
+                {
+                    Console.WriteLine("You don't have enough money to buy that many lemons. Please try again.");
+                    UserInterface.DisplayCash(player1);
+                    RefillLemons();
+                }else
+                {
+                    inventory.AddLemon(lemonAmount);
+                    dailyExpenses += (lemonAmount * new Lemon().Price);
+                    money -= (lemonAmount * new Lemon().Price);
+                }
             }
-            UserInterface.DisplayCash(player1);
+        }
+
+        private void RefillSugar()
+        {
             Console.WriteLine("Sugar: ");
             int sugarAmount = int.Parse(Console.ReadLine());
             if (sugarAmount != 0)
             {
-                inventory.AddSugar(sugarAmount);
-                dailyExpenses += (sugarAmount * new Cup().Price);
-                money -= (cupAmount * new Sugar().Price);
+                if ((sugarAmount * new Sugar().Price) > player1.Store.Money)
+                {
+                    Console.WriteLine("You don't have enough money to buy that many cubes of sugar. Please try again.");
+                    UserInterface.DisplayCash(player1);
+                    RefillSugar();
+                }else
+                {
+                    inventory.AddSugar(sugarAmount);
+                    dailyExpenses += (sugarAmount * new Sugar().Price);
+                    money -= (sugarAmount * new Sugar().Price);
+                }
             }
-            UserInterface.DisplayCash(player1);
+        }
+
+        private void RefillIce()
+        {
             Console.WriteLine("Ice: ");
             int iceAmount = int.Parse(Console.ReadLine());
             if (iceAmount != 0)
             {
-                inventory.AddIce(iceAmount);
-                dailyExpenses += (iceAmount * new Cup().Price);
-                money -= (cupAmount * new Ice().Price);
+                if ((iceAmount * new Ice().Price) > player1.Store.Money)
+                {
+                    Console.WriteLine("You don't have enough money to buy that many ice cubes. Please try again.");
+                    UserInterface.DisplayCash(player1);
+                    RefillIce();
+                }
+                else
+                {
+                    inventory.AddIce(iceAmount);
+                    dailyExpenses += (iceAmount * new Ice().Price);
+                    money -= (iceAmount * new Ice().Price);
+                }
             }
-            UserInterface.DisplayCash(player1);
-            Console.WriteLine("Inventory updated.");
-            UserInterface.DisplayInventory(player1);
-            Console.WriteLine();
         }
 
         public void SellLemonade(Day currentDay, Lemonade lemonade)

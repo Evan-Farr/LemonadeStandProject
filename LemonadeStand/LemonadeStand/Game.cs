@@ -21,7 +21,7 @@ namespace LemonadeStand
             GetPlayerName();
             UserInterface.DisplayRules(player1);
             GetGameMode();
-            UserInterface.RequestNewGame(new Game());
+            RequestNewGame();
         }
 
         private void GetPlayerName()
@@ -78,13 +78,13 @@ namespace LemonadeStand
 
         private void RunSevenDayGame()
         {
-            while(player1.Store.DaysOpen != 8)
+            while(player1.Store.DaysOpen != 8 && player1.Store.Money >= 0 && player1.Store.Inventory.Cups != 0)
             {
-                Console.WriteLine();
                 Console.WriteLine();
                 RunOneDay();
             }
-            DisplayEndResults();
+            UserInterface.DisplayEndResults(8, player1, 7);
+            RequestNewGame();
         }
 
         private void RunFourteenDayGame()
@@ -92,10 +92,9 @@ namespace LemonadeStand
             while (player1.Store.DaysOpen != 15)
             {
                 Console.WriteLine();
-                Console.WriteLine();
                 RunOneDay();
             }
-            DisplayEndResults();
+            UserInterface.DisplayEndResults(15, player1, 14);
         }
 
         private void RunTwentyOneDayGame()
@@ -103,10 +102,9 @@ namespace LemonadeStand
             while (player1.Store.DaysOpen != 22)
             {
                 Console.WriteLine();
-                Console.WriteLine();
                 RunOneDay();
             }
-            DisplayEndResults();
+            UserInterface.DisplayEndResults(22, player1, 21);
         }
 
         private void RequestInventoryRefill()
@@ -115,9 +113,20 @@ namespace LemonadeStand
             string response = Console.ReadLine().ToLower();
             if(response == "yes")
             {
-                player1.Store.RefillInventory();
+                if(player1.Store.Money <= 0)
+                {
+                    Console.WriteLine("It looks like you don't have any money left to spend.");
+                    Console.WriteLine("As long as you have some inventory left, try selling it to get out of the hole!");
+                    player1.Store.DailyExpenses = 0;
+                    Console.WriteLine();
+                }else
+                {
+                    player1.Store.DailyExpenses = 0;
+                    player1.Store.RefillInventory();
+                }
             }else if(response == "no")
             {
+                player1.Store.DailyExpenses = 0;
                 Console.WriteLine();
             }else if (response != "yes" && response != "no")
             {
@@ -127,9 +136,32 @@ namespace LemonadeStand
             }
         }
 
-        private void DisplayEndResults()
+        private void RequestNewGame()
         {
+            Console.WriteLine();
+            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
+            string response = Console.ReadLine().ToLower();
 
+            if (response == "yes")
+            {
+                Console.Clear();
+                PlayGame();
+            }
+            else if (response == "no")
+            {
+                Console.Clear();
+                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Hit [Enter] to quite.");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("You did not enter a valid input. Please type only 'yes' or 'no' as an answer.");
+                Console.WriteLine();
+                RequestNewGame();
+            }
         }
     }
 }

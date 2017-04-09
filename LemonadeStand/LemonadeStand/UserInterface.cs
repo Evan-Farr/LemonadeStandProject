@@ -44,10 +44,12 @@ namespace LemonadeStand
 
         public static void AlertEmptyInventoryItem(string product)
         {
+            
             Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------------");
             Console.WriteLine($"This day ended early because you ran out of {product} in your inventory!");
             Console.WriteLine("Make sure you have enough of each ingredient before starting a new day.");
-            Console.WriteLine();
+
         }
 
         public static void DisplayCash(Player player1)
@@ -69,10 +71,12 @@ namespace LemonadeStand
         public static void DisplayDailyResults(Player player1, Day currentDay)
         {
             Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine();
             Console.WriteLine($"Results from day {player1.Store.DaysOpen}: ");
             Console.WriteLine($">Total Sales: ${currentDay.Sales}");
             Console.WriteLine($">Customers: {currentDay.TotalCustomers}");
-            Console.WriteLine($">Today's Profit/Loss: {player1.Store.DailyProfitLoss}");
+            Console.WriteLine($">Today's Profit/Loss: ${player1.Store.DailyProfitLoss}");
             if(player1.Store.Money < 500)
             {
                 Console.WriteLine($">Cumulative Profit/Loss: - ${player1.Store.RunningProfitLoss}");
@@ -83,31 +87,37 @@ namespace LemonadeStand
             Console.WriteLine();
         }
 
-        public static void RequestNewGame(Game game)
+        public static void DisplayEndResults(int gameLength, Player player1, int day)
         {
-            Console.WriteLine();
-            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
-            string response = Console.ReadLine().ToLower();
-
-            if (response == "yes")
+            if (player1.Store.DaysOpen != gameLength)
             {
-                Console.Clear();
-                game.PlayGame();
-            }
-            else if (response == "no")
-            {
-                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
+                Console.WriteLine("Unfortunely you ran out of both money and cups. Without those there's no way to keep the business open.");
+                Console.WriteLine();
+                Console.WriteLine("Results: ");
+                Console.WriteLine($"Your business lasted until day {player1.Store.DaysOpen} out of {day}.");
+                Console.WriteLine("Starting Money: $500");
+                Console.WriteLine($"Ending Money: {player1.Store.Money}");
+                Console.WriteLine($"Final Score: {player1.Store.Money}");
+                Console.WriteLine();
                 Console.WriteLine("Thanks for playing!");
                 Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Hit [Enter] to quite.");
             }
             else
             {
                 Console.WriteLine();
-                Console.WriteLine("You did not enter a valid input. Please type only 'yes' or 'no' as an answer.");
+                Console.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
+                Console.WriteLine("GAME OVER. Congradulations on making it without having to close the store!");
                 Console.WriteLine();
-                RequestNewGame(game);
+                Console.WriteLine("Results: ");
+                Console.WriteLine($"Your business lasted until day {player1.Store.DaysOpen} out of {day}.");
+                Console.WriteLine("Starting Money: $500");
+                Console.WriteLine($"Ending Money: {player1.Store.Money}");
+                Console.WriteLine($"Final Score: {player1.Store.Money}");
+                Console.WriteLine();
+                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine();
             }
         }
     }
