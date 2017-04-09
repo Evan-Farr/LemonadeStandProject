@@ -21,7 +21,6 @@ namespace LemonadeStand
             GetPlayerName();
             UserInterface.DisplayRules(player1);
             GetGameMode();
-            RequestNewGame();
         }
 
         private void GetPlayerName()
@@ -78,10 +77,20 @@ namespace LemonadeStand
 
         private void RunSevenDayGame()
         {
-            while(player1.Store.DaysOpen != 8 && player1.Store.Money >= 0 && player1.Store.Inventory.Cups != 0)
+            while(player1.Store.DaysOpen != 8)
             {
-                Console.WriteLine();
-                RunOneDay();
+                if(player1.Store.DaysOpen == 1)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }else if(player1.Store.Money >= 0 && player1.Store.Inventory.Cups != 0)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }else
+                {
+                    break;
+                }
             }
             UserInterface.DisplayEndResults(8, player1, 7);
             RequestNewGame();
@@ -91,20 +100,46 @@ namespace LemonadeStand
         {
             while (player1.Store.DaysOpen != 15)
             {
-                Console.WriteLine();
-                RunOneDay();
+                if (player1.Store.DaysOpen == 1)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }
+                else if (player1.Store.Money >= 0 && player1.Store.Inventory.Cups != 0)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }
+                else
+                {
+                    break;
+                }
             }
             UserInterface.DisplayEndResults(15, player1, 14);
+            RequestNewGame();
         }
 
         private void RunTwentyOneDayGame()
         {
             while (player1.Store.DaysOpen != 22)
             {
-                Console.WriteLine();
-                RunOneDay();
+                if (player1.Store.DaysOpen == 1)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }
+                else if (player1.Store.Money >= 0 && player1.Store.Inventory.Cups != 0)
+                {
+                    Console.WriteLine();
+                    RunOneDay();
+                }
+                else
+                {
+                    break;
+                }
             }
             UserInterface.DisplayEndResults(22, player1, 21);
+            RequestNewGame();
         }
 
         private void RequestInventoryRefill()

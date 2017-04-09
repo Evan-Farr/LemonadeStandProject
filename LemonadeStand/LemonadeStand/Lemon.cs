@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         public Lemon()
         {
-            price = 1.00;
+            price = 1.50;
             shelfLife = 5;
         }
     }
