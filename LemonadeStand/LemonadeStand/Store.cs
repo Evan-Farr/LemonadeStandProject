@@ -15,12 +15,14 @@ namespace LemonadeStand
         private int daysOpen;
         private Random random;
         private Player player1;
+        private double dailyExpenses;
 
         public Inventory Inventory { get { return inventory; } }
         public double Money { get { return money; } set { money = value; } }
         public double DailyProfitLoss { get { return dailyProfitLoss; } set { dailyProfitLoss = value; } }
         public double RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }
         public int DaysOpen { get { return daysOpen; } set { daysOpen = value; } }
+        public double DailyExpenses { get { return dailyExpenses; } set { dailyExpenses = value; } }
 
         public Store(Random Random, Player Player1)
         {
@@ -33,6 +35,7 @@ namespace LemonadeStand
 
         public void RefillInventory()
         {
+            dailyExpenses = 0;
             UserInterface.DisplayPurchasePrices(new Cup(), new Lemon(), new Sugar(), new Ice());
             Console.WriteLine("Enter amount for each. If you don't need a certain product, enter '0'.");
             Console.WriteLine("Cups: ");
@@ -40,6 +43,7 @@ namespace LemonadeStand
             if (cupAmount != 0)
             {
                 inventory.AddCups(cupAmount);
+                dailyExpenses += (cupAmount * new Cup().Price);
                 money -= (cupAmount * new Cup().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -48,6 +52,7 @@ namespace LemonadeStand
             if (lemonAmount != 0)
             {
                 inventory.AddLemon(lemonAmount);
+                dailyExpenses += (lemonAmount * new Cup().Price);
                 money -= (cupAmount * new Lemon().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -56,6 +61,7 @@ namespace LemonadeStand
             if (sugarAmount != 0)
             {
                 inventory.AddSugar(sugarAmount);
+                dailyExpenses += (sugarAmount * new Cup().Price);
                 money -= (cupAmount * new Sugar().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -64,6 +70,7 @@ namespace LemonadeStand
             if (iceAmount != 0)
             {
                 inventory.AddIce(iceAmount);
+                dailyExpenses += (iceAmount * new Cup().Price);
                 money -= (cupAmount * new Ice().Price);
             }
             UserInterface.DisplayCash(player1);
@@ -152,27 +159,7 @@ namespace LemonadeStand
 
         public void CalculateDailyProfitLoss(double dailySales)
         {
-            if(daysOpen == 1)
-            {
-                if (money < 500)
-                {
-                    dailyProfitLoss = 500 - money;
-                }
-                else if (money > 500)
-                {
-                    dailyProfitLoss = dailySales;
-               }
-            }else
-            {
-                if (money < 500)
-                {
-                    dailyProfitLoss = 500 - money;
-                }
-                else if (money > 500)
-                {
-                    dailyProfitLoss = ((money + dailySales) - 500);
-                }
-            }
+            dailyProfitLoss = dailySales - dailyExpenses;
         }
 
         public void CalculateRunningProfitLoss(double dailySales)

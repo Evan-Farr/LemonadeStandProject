@@ -12,7 +12,6 @@ namespace LemonadeStand
         private Weather todaysWeather;
         private List<Customer> customers;
         private List<Customer> potentialCustomers;
-        private int totalCustomers;
         private Lemonade lemonade;
         private double sales;
         private Random random;
