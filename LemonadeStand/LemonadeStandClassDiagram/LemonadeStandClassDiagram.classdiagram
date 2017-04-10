@@ -43,12 +43,6 @@
               <referencedTypeMoniker Id="b1a0d883-9961-4f03-967e-948e73acd564" LastKnownName="string" />
             </type_NamedElement>
           </property>
-          <property Id="1c5dcf5a-bc07-4050-9d53-700925da685a" name="store" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="bc650f41-75ac-41ec-9d0a-fab65aa4c448" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="8743e789-9695-41f7-99be-a03edd153ee1" LastKnownName="Store" />
-            </type_NamedElement>
-          </property>
           <property Id="22c03142-da2c-4962-9603-dd51c6321983" name="finalScore" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="24bef2bc-559e-4221-a0ff-d6e62e8a0842" />
             <type_NamedElement>
@@ -103,12 +97,6 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="9352f493-449f-4295-a4af-b271823869b4" name="inventory" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="02f07e69-13e6-4dd2-97c6-4f0a1d075a4a" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="6fd1ebe7-abf2-46d7-b8e4-1adaa12ddfe4" LastKnownName="Inventory" />
-            </type_NamedElement>
-          </property>
           <property Id="97e1a03b-4e5a-4e61-b6e1-2a0c5a73ab7b" name="money" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="72930cea-dbb1-4721-81b9-9096d91db02d" />
             <type_NamedElement>
@@ -377,12 +365,6 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="27892815-7f7e-40e1-8942-f0fb18ac8268" name="player1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="64d83533-1519-4343-9d8f-145d83b99c57" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="45abb434-1836-4405-a2f8-b2f8090bf841" LastKnownName="Player" />
-            </type_NamedElement>
-          </property>
           <property Id="14d1cd1c-214d-440f-8cdd-48542607f539" name="gameMode" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="1502af93-6132-46f9-add4-ca80364c2a1b" />
             <type_NamedElement>
@@ -763,9 +745,6 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-          <operation Id="16c65610-8255-4ab8-bfca-6b98800ab51a" name="Operation1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="940cf429-4ddb-4494-8bfa-0efffdae3518" />
           </operation>
           <operation Id="b7f191aa-ae3e-41fa-a6c5-77afdc4a93a8" name="RemoveCups" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5e97381f-919c-446f-a7d2-38e917213b34" />
@@ -1610,18 +1589,8 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="8743e789-9695-41f7-99be-a03edd153ee1" name="Store" isAbstract="false" isLeaf="false" cachedFullName="LemonadeStandClassDiagram::Store">
-        <elementDefinition Id="3ef89b8f-6fd1-4f62-b0b1-9b6ea912e9a6" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="0ac89893-3f01-4311-966d-a0269be670ba" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
         <elementDefinition Id="557f89b1-3ec9-44b8-9103-5463099bad36" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="6fd1ebe7-abf2-46d7-b8e4-1adaa12ddfe4" name="Inventory" isAbstract="false" isLeaf="false" cachedFullName="LemonadeStandClassDiagram::Inventory">
-        <elementDefinition Id="316c9cf2-361a-4c7a-9422-90784fe3015f" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1676,24 +1645,16 @@
             <elementDefinition Id="4db4352b-9401-4d1d-a7a5-688baf492a89" />
           </association>
         </targetEnds>
-        <ownedOperationsInternal>
-          <operation Id="936d2e28-ca22-4f41-a6c9-c91a5691c275" name="Game lemonadeStand = new Game" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="60edf885-d9a7-4d43-b3db-309cc9aaea75" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="c6e1c286-e7b0-4844-af78-28e08fd89cd0" name=");(" direction="In" isUnique="false">
-                  <elementDefinition Id="30e81ed9-90f8-4667-be34-54df61ba7ed1" />
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="b973326f-bfc9-42e8-9290-d124c10654c6" name="lemonadeStand.PlayGame();" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="f50efd10-3714-4a3e-9d07-b3b58a1a211b" />
-          </operation>
-          <operation Id="9b624094-8dd1-48a3-97e5-c9c1599c696d" name="Console.ReadLine();" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="0ef23f22-e637-4918-972b-ab70e040b3d7" />
-          </operation>
-        </ownedOperationsInternal>
+        <ownedAttributesInternal>
+          <property Id="05a3624b-09b2-415b-81fe-6287e75dac6e" name="Game lemonadeStand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bedf686f-8c0a-4a81-94ac-c29f54ece42f" />
+            <defaultValue>
+              <literalString Id="47194b0d-a91e-4b29-b0d7-18b4dfea8308" name="DefaultValue" value="new Game();">
+                <elementDefinition Id="0a9622ef-b984-4e5e-9e6e-2068f01ba556" />
+              </literalString>
+            </defaultValue>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>

@@ -87,25 +87,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="bc650f41-75ac-41ec-9d0a-fab65aa4c448"
-            name="store"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="3ef89b8f-6fd1-4f62-b0b1-9b6ea912e9a6"
-                LastKnownName="Store"
-                LastKnownLocation="LemonadeStandClassDiagram.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="24bef2bc-559e-4221-a0ff-d6e62e8a0842"
             name="finalScore"
             visibility="Private"
@@ -227,25 +208,6 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property
-            Id="02f07e69-13e6-4dd2-97c6-4f0a1d075a4a"
-            name="inventory"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="316c9cf2-361a-4c7a-9422-90784fe3015f"
-                LastKnownName="Inventory"
-                LastKnownLocation="LemonadeStandClassDiagram.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="72930cea-dbb1-4721-81b9-9096d91db02d"
             name="money"
@@ -804,24 +766,6 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property
-            Id="64d83533-1519-4343-9d8f-145d83b99c57"
-            name="player1"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="71104951-5cd0-45eb-bae6-3a2095798eb9"
-                LastKnownName="Player"
-                LastKnownLocation="LemonadeStandClassDiagram.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="1502af93-6132-46f9-add4-ca80364c2a1b"
             name="gameMode"
@@ -1579,14 +1523,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="940cf429-4ddb-4494-8bfa-0efffdae3518"
-            name="Operation1"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="5e97381f-919c-446f-a7d2-38e917213b34"
             name="RemoveCups"
@@ -3305,42 +3241,26 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedOperationsInternal>
-          <operation
-            Id="60edf885-d9a7-4d43-b3db-309cc9aaea75"
-            name="Game lemonadeStand = new Game"
+        <ownedAttributesInternal>
+          <property
+            Id="bedf686f-8c0a-4a81-94ac-c29f54ece42f"
+            name="Game lemonadeStand"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="30e81ed9-90f8-4667-be34-54df61ba7ed1"
-                  name=");("
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="f50efd10-3714-4a3e-9d07-b3b58a1a211b"
-            name="lemonadeStand.PlayGame();"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="0ef23f22-e637-4918-972b-ab70e040b3d7"
-            name="Console.ReadLine();"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <defaultValue>
+              <literalString
+                Id="0a9622ef-b984-4e5e-9e6e-2068f01ba556"
+                name="DefaultValue"
+                value="new Game();" />
+            </defaultValue>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>
