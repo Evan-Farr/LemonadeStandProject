@@ -86,7 +86,91 @@
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="bc650f41-75ac-41ec-9d0a-fab65aa4c448"
+            name="store"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3ef89b8f-6fd1-4f62-b0b1-9b6ea912e9a6"
+                LastKnownName="Store"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="24bef2bc-559e-4221-a0ff-d6e62e8a0842"
+            name="finalScore"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="491b5d0d-7686-4097-86d3-a29e20a30c8c"
+            name="highScore"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1826c496-9333-42f2-a87c-acc596ed4f22"
+            name="Player"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8258d117-f2ca-4568-b222-283dd38a3eb3"
+                  name="string Name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85debd4b-fb65-40f3-87d0-7fc2d1ad428f"
+                  name="Random random"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -142,6 +226,442 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="02f07e69-13e6-4dd2-97c6-4f0a1d075a4a"
+            name="inventory"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="316c9cf2-361a-4c7a-9422-90784fe3015f"
+                LastKnownName="Inventory"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="72930cea-dbb1-4721-81b9-9096d91db02d"
+            name="money"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4f521817-8c6a-4497-b432-b15e89cb7378"
+            name="dailyProfitLoss"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1aa44a15-ed64-464f-b064-62a68fcae323"
+            name="runningProfitLoss"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1bb4e41e-4753-4adb-9ea3-de0cc5a89414"
+            name="daysOpen"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e94a3d67-3ba2-418c-bf9e-0ba16a1a76da"
+            name="random"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+                LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="565250d6-4959-406e-ae26-0f1b4d81a9c1"
+            name="player1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="71104951-5cd0-45eb-bae6-3a2095798eb9"
+                LastKnownName="Player"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eaa690fe-b4d0-467f-9cfc-4544e82f9bfa"
+            name="dailyExpenses"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9eaa4fe7-fd73-411c-8346-37db32004477"
+            name="Store"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c695d851-cd91-46fb-a244-1d42de0e01c7"
+                  name="Random Random"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="92a94c73-e746-4543-a112-8e5de0975e31"
+                  name="Player Player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8bc897a8-8e2f-49e2-9514-fc8b16a2d184"
+            name="RefillInventory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3835d2b3-24c2-4ab8-87a2-055e7193eed1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a9daff02-bf53-46ce-abd5-bc87be93f61a"
+            name="RefillCups"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b740167-da40-420c-9e60-bc7ca8e7c0d6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0c4e05cd-4494-403a-8851-b99585fbcd70"
+            name="RefillLemons"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7881444-7656-471b-b6a5-5d592b9bf96f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3e1b41d3-a3dd-4a90-a86c-7a8bc3ee8165"
+            name="RefillSugar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5305980-5796-4a3e-8069-c8d3ba4fc778"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4bbba36a-7d05-44aa-9d49-cfea51d68db8"
+            name="RefillIce"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2b16c949-1d0f-4adf-bf9c-87dce5f23616"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fc8e0afc-f8fd-4966-94af-8176d6f9fd30"
+            name="SellLemonade"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51255321-c169-4ab3-bdb2-91ffe4307176"
+                  name="Day currentDay"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c5269e6e-6284-4359-b30d-985d23fe1167"
+                  name="Lemonade lemonade"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9588530-6fc9-45a9-97d4-349d305ae264"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="667238c9-8615-4012-b029-ab76f5570b5b"
+            name="UpdateMoney"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4e354cb7-1ba6-4803-95fb-cffbaac060de"
+                  name="double sales"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a173b99-c2d7-4f67-9f79-869f73fcf855"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="598083e8-bf5d-446f-a1d0-956853a828cf"
+            name="CalculateDailyProfitLoss"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f9faa277-3841-4b66-9b75-c3f9f19b3725"
+                  name="double dailySales"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f98a1ecf-f1ba-4b6b-a41a-71f9b25eca62"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0e271b5b-7d0b-470d-9af4-32675113a052"
+            name="CalculateRunningProfitLoss"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a3738f25-fda1-4e4b-90f8-b9ddda60c26e"
+                  name="double dailySales"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="67d6be73-4c06-49cf-9e6f-50e76ff46646"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -283,6 +803,290 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="64d83533-1519-4343-9d8f-145d83b99c57"
+            name="player1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="71104951-5cd0-45eb-bae6-3a2095798eb9"
+                LastKnownName="Player"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1502af93-6132-46f9-add4-ca80364c2a1b"
+            name="gameMode"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bd0103bb-65b2-4d23-b7ee-c86190842604"
+            name="random"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+                LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="65109c99-0d8c-4068-aab1-947ca074f560"
+            name="PlayGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e3035d3e-fdca-4a4d-b553-d084168cecdc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="12da37d8-4260-4c94-99e3-8101365556c0"
+            name="GetPlayerName"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d94c313-c494-4798-9aa9-803fc0eb78c4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8b525077-fb79-48e0-8807-d1ecdfdeba3b"
+            name="GetGameMode"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc86b206-a9b0-4a45-92a3-20cfcb52159d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="132f1f8b-cb6e-4481-a775-d3008de7ed75"
+            name="RunOneDay"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="160363ef-a2a0-4cf3-877b-7bccc0c38085"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3aadc69c-226b-4dbf-94c9-f4ce59b44ab3"
+            name="RunSevenDayGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ecf9fd1b-f5d0-4e08-97e8-faf6d363633b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e6e4ed0-b1c6-457a-8a70-93771ad112b3"
+            name="RunFourteenDayGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fed58c51-b20f-4e4a-90fe-a4ab303c16bd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="44c6daaa-8021-48af-8059-292b70998756"
+            name="RunTwentyOneDayGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e49b6e4-04ba-4e60-b6c1-15574f5b38bb"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="48766ce2-8880-4c31-8df4-ab405a56f1aa"
+            name="RequestInventoryRefill"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb12af9c-3b0e-484e-b1ab-b571b6935031"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ec094725-fd3b-41b2-b1c2-48b6ab5f82bd"
+            name="RequestNewGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d78a2768-0792-4b40-9f71-3d27a3f1d76e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -580,6 +1384,272 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5e6dc8fd-f1ad-4709-b394-ad234300050e"
+            name="Inventory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="59f250f4-53cf-4119-b4cb-135a5fd4f2d6"
+            name="RemoveLemons"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b2d2ef2c-20d2-41ae-bf0a-9cc9c15fd508"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="557f89b1-3ec9-44b8-9103-5463099bad36"
+                      LastKnownName="bool"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6c099850-ebde-4a83-a9b7-fb142a3bb697"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0ff2b0b7-9efd-4921-ba89-338fa19796d2"
+            name="AddLemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c87239e6-ffdd-49b7-8276-ec834f40a095"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="099de9cc-0909-49b7-b39f-78347058baf4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e599dc95-54c7-478d-9ec2-88a0ebed3097"
+            name="RemoveSugar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fd468818-68ec-4d36-93a7-5697aa9237cd"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9adc4b9b-a209-4331-8977-4fbdca7d6a7f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="557f89b1-3ec9-44b8-9103-5463099bad36"
+                      LastKnownName="bool"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ea97b624-d418-4c18-ac8a-9563c6244ffa"
+            name="AddSugar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="389aa135-eb43-45c0-8f22-eaa216e8da9d"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="77f934ad-2934-46c5-8be2-2884ef5740bf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a07b8135-4824-45d1-8d66-9c72e3e2f1f4"
+            name="RemoveIce"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="716b0766-b227-4a6c-8343-7e25d0b4cc4e"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6c56e177-4ee4-4efd-8ce1-107bac8286a1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="557f89b1-3ec9-44b8-9103-5463099bad36"
+                      LastKnownName="bool"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a282e4e6-a60f-4fce-9be5-9db7bdabfa4a"
+            name="AddIce"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d210dbff-c8e9-46d9-bb37-39714f6c949d"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c8b4c8e-6dad-42e3-a0bc-737873537285"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="940cf429-4ddb-4494-8bfa-0efffdae3518"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5e97381f-919c-446f-a7d2-38e917213b34"
+            name="RemoveCups"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="63f92421-56d3-414a-bc10-ffe89cd9f45c"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2829914-977e-4cc7-8905-33ec0611d118"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="557f89b1-3ec9-44b8-9103-5463099bad36"
+                      LastKnownName="bool"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b163f278-65e5-4546-aa5f-452e53c1ceca"
+            name="AddCups"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c16014e-cfeb-449c-b739-4ac6c6b6befa"
+                  name="int amount"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c2895c9-ba17-4b8b-a005-731524d424a2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -610,6 +1680,16 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8e07cd8e-c10b-428b-b057-158de4f88828"
+            name="Product"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -697,6 +1777,165 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="52c9840e-4d0c-42be-888d-8f6587b43ca1"
+            name="Lemonade"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="07468b3f-f35d-46d1-beb4-1f50675ade5f"
+            name="GetRecipe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dfd0e4c2-25ac-4d5f-ab17-ff207df55741"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f9ffb5ed-1391-404d-8d8d-6ddc95c61e37"
+            name="GetLemonAmount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3bbfca53-9fa7-4cd4-b751-1dcc1e8633c6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="89083460-3358-4dc8-a74d-9e8a633b7908"
+            name="GetSugarAmount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d2f30319-7ea6-4666-9d7e-18a6246f7392"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f44d8e7b-8ab4-49ee-92d9-25c42c6f453a"
+            name="GetIceAmount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9361d92-fa95-4163-bf74-039a40ea6a92"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73ef5f23-0b66-4f58-b5d0-72a9419d081a"
+            name="DisplayRecipe"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0d3e03c-a70f-4f34-9669-7da07ea67f1f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e3236de-7d5f-493d-a620-45df3a60ad85"
+            name="SetLemonadePrice"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa5c0d7c-4281-4f71-840a-28aed35b2d27"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -716,6 +1955,16 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6605687f-7587-42a2-bf99-6943eb342af9"
+            name="Lemon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -735,6 +1984,16 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="24daf916-7371-4788-96fc-21325ceff533"
+            name="Cup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -754,6 +2013,16 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c950c74a-1c13-4ba8-a86d-957fdc6a1cef"
+            name="Sugar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -773,6 +2042,16 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5112ddcb-254c-4610-bfbd-98bbda883af0"
+            name="Ice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -914,6 +2193,148 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="511ba3bf-4f5d-4088-99e4-858b2da3f0f3"
+            name="todaysWeather"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="49254664-caf3-4eb4-9927-0ed74bca6a0f"
+                LastKnownName="Weather"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="01acc69e-bee8-48d1-b7b3-bf38d16c6595"
+            name="customers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4adb9bb7-8433-4b02-bc24-78e04abbe39c"
+                LastKnownName="List&lt;Customer&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b492856e-b084-4bfc-8eaf-0c6c1e2ed94e"
+            name="potentialCustomers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4adb9bb7-8433-4b02-bc24-78e04abbe39c"
+                LastKnownName="List&lt;Customer&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b8a86302-efa9-4e7a-8875-6884eb64cceb"
+            name="sales"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bee5fa9a-6696-412d-8add-a01d2b14eb6b"
+            name="random"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+                LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="79d8b9cc-53ab-4e17-a770-3c088ad16d53"
+            name="Day"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ac440cd-943e-4309-8093-8dfa848a2732"
+                  name="Random Random"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="12db5470-5a92-466d-969b-5dcfb4fe9801"
+            name="SetPotentialCustomers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cca63128-e215-4d7c-b1a1-a10d54fa9e49"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -922,7 +2343,240 @@
         name="Weather"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7d50328b-7eb3-4092-82ba-010ed0db9478"
+            name="skyCover"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cf3db5e0-d1be-4efa-abcd-b812e52932aa"
+            name="temperature"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3f79929d-41be-41bf-8e27-41973f8548a1"
+            name="lemonadeDemand"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ab34dda1-5f38-4174-b81b-6e8742b0c741"
+            name="random"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+                LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d4b167ef-469e-4e7f-b601-a827505a73c4"
+            name="Weather"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f8067efb-76c2-404d-9107-0ff4059c4db5"
+                  name="Random Random"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f462d46e-2b7b-41c0-b516-75b7d06e7f75"
+            name="GetWeather"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b9bee43-c057-46c0-8460-7565d24cca6f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="53532dd0-52ef-4182-bdab-84ed423cdd74"
+            name="DisplayWeather"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31d69849-69b7-4b8d-9eb6-82066e67ddd6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1b927838-6391-4e40-9601-1d05fcbaee80"
+            name="GetSkyCover"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e149d1ed-e472-4b1b-a1e1-6735c47f642b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                      LastKnownName="string"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f832a885-dce4-4c98-8cd3-3e23fb655679"
+            name="GetTemperature"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="874d888a-6f28-4493-a758-bc384d2ebaf7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                      LastKnownName="string"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9ea77fdb-14ac-47da-ab34-406b8c2cc095"
+            name="DetermineDemand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbce3b19-2bb3-4893-a1e2-198e0ae7dc6c"
+                  name="string skyCover"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d155bad1-a7e2-4987-bcf8-820df9581419"
+                  name="string temperature"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="004dfd06-2dd5-4d88-b160-fc0494a166ff"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                      LastKnownName="string"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -947,6 +2601,286 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </dependency>
         </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="08e4bf66-09d7-468d-865e-c2c7f9260c9b"
+            name="maxWillingToPay"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f69cc21a-3dc2-4a49-983b-ad5927c770c9"
+            name="lemonPreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9f71c796-3e7d-44a5-815a-9592897ba3e6"
+            name="icePreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="898a1906-b424-4083-919a-1d1c3dcbfb45"
+            name="sugarPreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="55719a60-c556-4e79-acf3-01fd2a5002d6"
+            name="chanceOfBuying"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="74070fa7-f88f-4a15-b44e-c65c934e42e2"
+            name="cupsBought"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ca8f9614-60ec-45f9-aeed-aeccbec7895c"
+            name="random"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+                LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="350e8d77-ddcb-4351-9153-89dc21927db3"
+            name="Customer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36e6179c-170c-4c07-98fd-5da923b61688"
+                  name="Random Random"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e4c4b0b0-90be-402d-b3c8-54afb261ec94"
+            name="SetMaxWillingToPay"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16dad82b-57ab-4188-80bd-e88fdf9bac91"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                      LastKnownName="double"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8093d973-e738-45b4-8c0f-6c29711adbcc"
+            name="DetermineChanceOfBuying"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="09f84739-4043-44ca-8f86-bf0be7a26501"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                      LastKnownName="int"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5a55d0b0-395f-4e9d-87d1-11ac180536ee"
+            name="SetLemonPreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e52d647f-3e67-4dcc-bdf6-489b11d1b631"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                      LastKnownName="int"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fad98b1a-209f-4f9f-b37d-3b42db9bb386"
+            name="SetSugarPreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05bf1847-1092-406a-89d0-331737e93770"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                      LastKnownName="int"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2f02c1fa-01cb-46c7-8ce1-d74ae51c7519"
+            name="SetIcePreference"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74cb2d20-7d73-4557-8008-23ddce6ce91b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                      LastKnownName="int"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -992,6 +2926,291 @@
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </dependency>
         </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4a9436e4-dd4f-4b37-a5a4-9f05ebbf7087"
+            name="DisplayPremise"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="48ec841c-71fd-4a33-bde6-d9f992effed4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5c3b13a9-cf42-4499-bb7f-8d731070ae30"
+            name="DisplayRules"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f667d311-341b-4b0b-909c-e3e007eb6439"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f90fe23-e674-4bfa-9e7e-859dbfa7955d"
+                  name="Player player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a509ab76-15f1-4ab7-a868-519a601a26ba"
+            name="DisplayInventory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f5ac45c5-9bd8-46ff-b19b-5c9501c58ca7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da095d78-4427-4e6a-a468-50edcb4fce46"
+                  name="Player player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4e1c0dd1-cc48-4573-93c1-994afc4a71c3"
+            name="AlertEmptyInventoryItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ee82146-2e09-4625-848c-118f318a69bd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0e133e2-109b-49fc-b759-700936271076"
+                  name="string product"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0a5e533a-c49d-4dce-b1e3-85208eb20884"
+            name="DisplayCash"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e68d5b60-3ce9-4cfb-8504-8c8b8830bc57"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="428dae25-c0f2-4390-9f27-2116bc8a51c5"
+                  name="Player player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c4e26e06-f347-4bed-af98-e28b1b404e12"
+            name="DisplayPurchasePrices"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fb49843-6650-4c50-8dc9-5ad0b1e171d9"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="126a2f19-3b60-4c35-b5ef-ce4fd6a03f2b"
+                  name="Cup cup"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bad4171d-8451-4049-b817-6cc17d34bf25"
+                  name="Lemon lemon"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7225d739-415a-4a71-92e5-3d2dd1541ca5"
+                  name="Sugar sugar"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7082db4e-65bd-449f-9f52-e1ffc1864f69"
+                  name="Ice ice"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cdf27382-788a-414d-9217-4035770f8292"
+            name="DisplayDailyResults"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4330135-c949-4612-9345-dbd2a175c154"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60786279-eb7e-4109-8a2e-0f1ce792f793"
+                  name="Player player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ae72418-b1a1-4c1b-a6ea-05cdf497b084"
+                  name="Day currentDay"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5137161f-1b23-41ef-8a08-0ebf3203a481"
+            name="DisplayEndResults"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5e5805be-e8b0-46a8-9a03-c958e5ee3ba1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+                      LastKnownName="void"
+                      LastKnownLocation="LemonadeStandClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10992cf7-e798-4108-befc-d129fe16cc5a"
+                  name="int gameLength"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70d15a9a-5dd0-44e6-8b0b-a4a133c08041"
+                  name="Player player1"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="32584eaf-3881-42f7-81fe-aaeb998d3838"
+                  name="int day"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1003,6 +3222,126 @@
       <undefinedType
         Id="15d70b0d-e820-4807-9ca5-7a8e0bb8eff1"
         name="List&lt;Ice&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a54ed563-886e-405f-b239-1fe05d9218a7"
+        name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8bad3ce0-04c2-4371-b333-5cbb0630714b"
+        name="Bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="557f89b1-3ec9-44b8-9103-5463099bad36"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
+        name="Random" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4adb9bb7-8433-4b02-bc24-78e04abbe39c"
+        name="List&lt;Customer&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cdaab742-5e67-4ce8-8483-ca3617be3635"
+        name="Program"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="b40008c8-5597-4c89-b059-b761c70acef1">
+            <classMoniker
+              Id="a9dac253-f17b-42af-897a-d2ee8c49a64e"
+              LastKnownName="Game"
+              LastKnownLocation="LemonadeStandClassDiagram.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="4db4352b-9401-4d1d-a7a5-688baf492a89"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a9dac253-f17b-42af-897a-d2ee8c49a64e"
+              LastKnownName="Game"
+              LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bf333d1-0682-4c5a-9011-eb36223ee9e7"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="028ebc26-2929-4751-863c-2af0e9b02f6d"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="60edf885-d9a7-4d43-b3db-309cc9aaea75"
+            name="Game lemonadeStand = new Game"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30e81ed9-90f8-4667-be34-54df61ba7ed1"
+                  name=");("
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f50efd10-3714-4a3e-9d07-b3b58a1a211b"
+            name="lemonadeStand.PlayGame();"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0ef23f22-e637-4918-972b-ab70e040b3d7"
+            name="Console.ReadLine();"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
