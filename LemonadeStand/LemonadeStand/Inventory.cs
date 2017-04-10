@@ -32,15 +32,21 @@ namespace LemonadeStand
 
         public bool RemoveLemons(int amount)
         {
-            for (int i = 0; i < amount; i++)
+            if (amount > lemonsList.Count)
             {
-                if (LemonsList.Count != 0)
-                {
-                    LemonsList.RemoveAt(0);
-                    return true;
-                }
+                return false;
             }
-            return false;
+            else
+            {
+                for (int i = 0; i < amount; i++)
+                {
+                    if (lemonsList.Count != 0)
+                    {
+                        lemonsList.RemoveAt(0);
+                    }
+                }
+                return true;
+            }
         }
         public void AddLemon(int amount)
         {
@@ -52,15 +58,21 @@ namespace LemonadeStand
 
         public bool RemoveSugar(int amount)
         {
-            for (int i = 0; i < amount; i++)
+            if (amount > sugarList.Count)
             {
-                if(SugarList.Count != 0)
-                {
-                    SugarList.RemoveAt(0);
-                    return true;
-                }
+                return false;
             }
-            return false;
+            else
+            {
+                for (int i = 0; i < amount; i++)
+                {
+                    if (sugarList.Count != 0)
+                    {
+                        sugarList.RemoveAt(0);
+                    }
+                }
+                return true;
+            }
         }
         public void AddSugar(int amount)
         {
@@ -72,15 +84,21 @@ namespace LemonadeStand
 
         public bool RemoveIce(int amount)
         {
-            for (int i = 0; i < amount; i++)
+            if (amount > iceList.Count)
             {
-                if(IceList.Count != 0)
-                {
-                    IceList.RemoveAt(0);
-                    return true;
-                }
+                return false;
             }
-            return false;
+            else
+            {
+                for (int i = 0; i < amount; i++)
+                {
+                    if (iceList.Count != 0)
+                    {
+                        iceList.RemoveAt(0);
+                    }
+                }
+                return true;
+            }
         }
         public void AddIce(int amount)
         {
@@ -92,15 +110,20 @@ namespace LemonadeStand
 
         public bool RemoveCups(int amount)
         {
-            for (int i = 0; i < amount; i++)
+            if(amount > cupsList.Count)
             {
-                if(CupsList.Count != 0)
+                return false;
+            }else
+            {
+                for (int i = 0; i < amount; i++)
                 {
-                    CupsList.RemoveAt(0);
-                    return true;
+                    if (cupsList.Count != 0)
+                    {
+                        cupsList.RemoveAt(0);
+                    }
                 }
+                return true;
             }
-            return false;
         }
         public void AddCups(int amount)
         {
