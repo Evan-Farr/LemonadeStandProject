@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8703392f-a22a-4536-899c-35af5a1e71ed" name="LemonadeStandClassDiagram" linkedPackageId="9eb0d076-799c-47ab-9916-92524f6c841c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="e5709025-44f9-4c87-a407-c448e46b5eb8">
-      <profileInstance Id="51736f84-991b-4f0c-b967-dcd8c0f17622" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="05c94199-af53-4d3b-97e9-003877feaac0">
-      <profileInstance Id="a18778cd-52e6-45bc-8c9f-6e2f75388c46" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="12d2c574-2f2d-4a66-b8ec-ca0abea1f217" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -723,10 +709,10 @@
               <referencedTypeMoniker Id="06a7866b-26c3-4a0f-ac33-52c6c7edd559" LastKnownName="List&lt;Cup&gt;" />
             </type_NamedElement>
           </property>
-          <property Id="48797d80-1ff0-485d-97c2-55929da5f780" name="{ get { return lemonsList.Count; } }" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="48797d80-1ff0-485d-97c2-55929da5f780" name="Lemons { get { return lemonsList.Count; } }" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="49ce3ee0-e2d5-470e-a2ef-78bff84bff63" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="02246c68-8d18-436f-bd86-83ad4223502a" LastKnownName="int" />
+              <referencedTypeMoniker Id="0b2a9cf0-5e69-4753-90a5-6011ad6cbed2" LastKnownName="int" />
             </type_NamedElement>
           </property>
           <property Id="da06be20-1c46-4d26-9e3a-7cab7258d83c" name="Sugar { get { return sugarList.Count; } }" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1910,8 +1896,27 @@
         <elementDefinition Id="3ef89b8f-6fd1-4f62-b0b1-9b6ea912e9a6" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0b2a9cf0-5e69-4753-90a5-6011ad6cbed2" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="a1d0427f-7071-4d66-8d7d-646d2299f407" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="9eb0d076-799c-47ab-9916-92524f6c841c" name="LemonadeStandClassDiagram">
     <elementDefinition Id="1d14cd50-7b86-4d6b-8e45-871014d39a15" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e5709025-44f9-4c87-a407-c448e46b5eb8">
+        <profileInstance Id="51736f84-991b-4f0c-b967-dcd8c0f17622" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="05c94199-af53-4d3b-97e9-003877feaac0">
+        <profileInstance Id="a18778cd-52e6-45bc-8c9f-6e2f75388c46" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

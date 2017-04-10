@@ -1599,7 +1599,7 @@
           </property>
           <property
             Id="49ce3ee0-e2d5-470e-a2ef-78bff84bff63"
-            name="{ get { return lemonsList.Count; } }"
+            name="Lemons { get { return lemonsList.Count; } }"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
