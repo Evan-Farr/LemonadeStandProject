@@ -12,7 +12,6 @@ namespace LemonadeStand
         private Weather todaysWeather;
         private List<Customer> customers;
         private List<Customer> potentialCustomers;
-        //private Lemonade lemonade;
         private double sales;
         private Random random;
 
@@ -30,7 +29,6 @@ namespace LemonadeStand
             customers = new List<Customer>();
             potentialCustomers = new List<Customer>();
             SetPotentialCustomers();
-            //lemonade = new Lemonade();
             sales = 0;
         }
 
