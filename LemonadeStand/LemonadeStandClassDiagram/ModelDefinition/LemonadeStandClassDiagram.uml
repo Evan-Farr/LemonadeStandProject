@@ -124,6 +124,78 @@
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="59c67e45-b0fa-4f76-8c4d-82c8ae75c130"
+            name="Name { get { return name; } set { name = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b80d42c-2d13-4877-b6d9-6e0acba65120"
+            name="Store { get { return store; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3ef89b8f-6fd1-4f62-b0b1-9b6ea912e9a6"
+                LastKnownName="Store"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a693592f-ef79-4194-a44d-ed54e767d875"
+            name="FinalScore { get { return finalScore; } set { finalScore = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5ef57b7-727a-48d5-a47c-985c3858bead"
+            name="HighScore { get { return highScore; } set { highScore = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -326,6 +398,114 @@
             Id="eaa690fe-b4d0-467f-9cfc-4544e82f9bfa"
             name="dailyExpenses"
             visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f775fdf3-559b-4363-ad0e-7a1f8b4ce0a2"
+            name="Inventory { get { return inventory; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="316c9cf2-361a-4c7a-9422-90784fe3015f"
+                LastKnownName="Inventory"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="423f59e1-e966-43bb-9406-e19f21b8a8c8"
+            name="Money { get { return money; } set { money = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e4294aa0-4d92-4fb5-99b6-75b73c052bad"
+            name="DailyProfitLoss { get { return dailyProfitLoss; } set { dailyProfitLoss = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="22cc47dc-742f-4dcc-b617-b3c366f5d91d"
+            name="RunningProfitLoss { get { return runningProfitLoss; } set { runningProfitLoss = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="37d97096-44e5-4ac8-ab62-9c125c7264a2"
+            name="DaysOpen { get { return daysOpen; } set { daysOpen = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="840dc6e1-90bd-49f5-b908-1c2764ec264a"
+            name="DailyExpenses { get { return dailyExpenses; } set { dailyExpenses = value; } }"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -801,6 +981,24 @@
               <undefinedTypeMoniker
                 Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
                 LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0ff53c3f-68ff-46f5-afb9-650db8647401"
+            name="GameMode { get { return gameMode; } set { gameMode = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -1327,6 +1525,150 @@
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="aec91c48-d72a-4a57-a1d6-c15d189854ba"
+            name="LemonsList { get { return lemonsList; } set { lemonsList = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="833a219c-6887-4680-8933-03f2b312f392"
+                LastKnownName="List&lt;Lemon&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1d8618b0-78d9-43ca-a331-1834cc765a79"
+            name="SugarList { get { return sugarList; } set { sugarList = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a16d9871-1331-4237-adf6-88b8e352dac9"
+                LastKnownName="List&lt;Sugar&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="32fad1e9-21bc-4366-a0d7-e830b637cb73"
+            name="IceList { get { return iceList; } set { iceList = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="15d70b0d-e820-4807-9ca5-7a8e0bb8eff1"
+                LastKnownName="List&lt;Ice&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="50633d0a-a36c-4799-ab01-65c629b8069a"
+            name="CupsList { get { return cupsList; } set { cupsList = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9e4cdeb4-a97c-454f-82a6-ca39a4d95f51"
+                LastKnownName="List&lt;Cup&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="49ce3ee0-e2d5-470e-a2ef-78bff84bff63"
+            name="{ get { return lemonsList.Count; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2b1e1ab0-d8a8-49aa-b60f-a106520c31e1"
+            name="Sugar { get { return sugarList.Count; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2afd4c20-c9e2-46cc-8adf-def77debf24d"
+            name="Ice { get { return iceList.Count; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="68ef866d-1352-4502-b19a-7ca59cd69fe1"
+            name="Cups { get { return cupsList.Count; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1615,6 +1957,24 @@
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="e1c12d58-1e9c-4918-9757-dec6a3d22b48"
+            name="Price { get { return price; } set { price = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1709,6 +2069,78 @@
               <undefinedTypeMoniker
                 Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
                 LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5906a7e8-1469-479c-93b6-c161c77ac515"
+            name="LemonAmount { get { return lemonAmount; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="35af569f-9174-4cd3-b999-d4f0aa7f74bc"
+            name="IceAmount { get { return iceAmount; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d3564fad-0806-4325-8185-5ca9d592225c"
+            name="SugarAmount { get { return sugarAmount; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bd236c92-fa75-4a91-ad9c-e35bfeb5f2ae"
+            name="PricePerCup { get { return pricePerCup; } set { pricePerCup = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -2225,6 +2657,96 @@
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="34ad1745-2e33-4f42-abc0-6650c56179f0"
+            name="TodaysWeather { get { return todaysWeather; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="49254664-caf3-4eb4-9927-0ed74bca6a0f"
+                LastKnownName="Weather"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="96235367-4b20-4b17-86bd-0335078feab2"
+            name="TotalCustomers { get { return customers.Count; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="61904132-27ed-4e98-98e3-36c73411cf8c"
+            name="Customers { get { return customers; } set { customers = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4adb9bb7-8433-4b02-bc24-78e04abbe39c"
+                LastKnownName="List&lt;Customer&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5a98a294-600e-48e5-8661-f351208d79fe"
+            name="PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4adb9bb7-8433-4b02-bc24-78e04abbe39c"
+                LastKnownName="List&lt;Customer&gt;"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="82980904-9428-4af1-95fc-9ea867dd5af6"
+            name="Sales { get { return sales; } set { sales = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2354,6 +2876,60 @@
               <undefinedTypeMoniker
                 Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
                 LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3e759421-bbfa-44b9-a0c4-8e00daf0cc0d"
+            name="SkyCover { get { return skyCover; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="aa338e00-80db-43c2-99b0-e0ad94f02791"
+            name="Temperature { get { return temperature; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bfa18897-7b51-45ce-9c6d-b47cded63631"
+            name="LemonadeDemand { get { return lemonadeDemand; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="91f75331-bd71-4b5c-9a13-d21a36f08993"
+                LastKnownName="string"
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>
@@ -2668,6 +3244,114 @@
               <undefinedTypeMoniker
                 Id="d6b8fea4-ca2c-479e-a979-f7f26442ed42"
                 LastKnownName="Random"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="baaf2916-4c18-4d31-bc93-c6a505021750"
+            name="MaxWillingToPay { get { return maxWillingToPay; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc246477-7af1-4307-b77f-fc9289c89896"
+                LastKnownName="double"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a9af2988-715b-4e62-a0b0-ff93f5616e70"
+            name="LemonPreference { get { return lemonPreference; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5d5c536c-bae3-48bf-9de4-9ba3bde6f75c"
+            name="SugarPreference { get { return sugarPreference; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c7189438-8966-40b4-9abb-66c82f0c32c1"
+            name="IcePreference { get { return icePreference; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ae1df670-e83d-4e83-b58f-ef3d645ea2f7"
+            name="ChanceOfBuying { get { return chanceOfBuying; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
+                LastKnownLocation="LemonadeStandClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b6333703-491d-495e-a1d5-438164cfc658"
+            name="CupsBought { get { return cupsBought; } set { cupsBought = value; } }"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1d0427f-7071-4d66-8d7d-646d2299f407"
+                LastKnownName="int"
                 LastKnownLocation="LemonadeStandClassDiagram.uml" />
             </type_NamedElement>
           </property>

@@ -16,7 +16,6 @@ namespace LemonadeStand
         private Random random;
 
         public Weather TodaysWeather { get { return todaysWeather; } }
-        //public Lemonade Lemonade { get { return lemonade; } }
         public int TotalCustomers { get { return customers.Count; } }
         public List<Customer> Customers { get { return customers; } set { customers = value; } }
         public List<Customer> PotentialCustomers { get { return potentialCustomers; } set { potentialCustomers = value; } }
