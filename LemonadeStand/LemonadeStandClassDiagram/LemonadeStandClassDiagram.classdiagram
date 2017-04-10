@@ -115,21 +115,21 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="3f2cb39c-ae2d-4832-9dc5-088ca8d57e14" />
           </association>
-          <association Id="90547764-77a8-4c53-9cd8-901be1260f54" isDerived="false" sourceEndRoleName="Game" targetEndRoleName="UserInterface" isLeaf="false" isAbstract="false">
+          <association Id="77ba9974-3216-45ba-ac5a-bc65d85b6917" isDerived="false" sourceEndRoleName="Game" targetEndRoleName="UserInterface" isLeaf="false" isAbstract="false">
             <classMoniker Id="9942372c-f8ab-4001-b6bd-3cc5fdc01132" LastKnownName="UserInterface" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="57b80ab9-ffe7-45aa-9333-b25a18be2ad6" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="d4de7071-4d9c-4d70-97de-2d90d47ef6e3" />
+                <memberEnd Id="e2538e14-09f1-4dfb-a49b-325275c7bb6d" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a55a97d2-5346-4837-a756-6ae361d0506a" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="69ef53e9-8d87-46e7-b06a-c45d34267ede" name="UserInterface" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7a7db719-01af-45c9-9684-cfaf776e91be" />
+                <memberEnd Id="edd83576-bfea-4749-bf7c-8ea1d5df9dd0" name="UserInterface" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2b0a329-c632-47ee-820a-ba082aaabf68" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="0a90bd69-3620-4549-b959-932f355dda89" />
+            <elementDefinition Id="329a0ab0-7db2-45ea-b034-1e42ca68ced9" />
           </association>
         </targetEnds>
       </class>
@@ -481,6 +481,10 @@
           <dependency Id="6d14d9b3-668b-44da-9192-3b22c6916e58">
             <classMoniker Id="12d2c574-2f2d-4a66-b8ec-ca0abea1f217" LastKnownName="Player" />
             <elementDefinition Id="54c3c6b6-262c-4007-ac96-2aa0deac877d" />
+          </dependency>
+          <dependency Id="15bf6731-b932-4d85-858e-5dff299eeefc">
+            <classMoniker Id="263e60b2-07da-4403-aee3-d142728eb1a7" LastKnownName="Day" />
+            <elementDefinition Id="7a64f14e-b9d9-4891-8ea6-ce85a0da23d8" />
           </dependency>
         </suppliersInternal>
       </class>

@@ -244,7 +244,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="0a90bd69-3620-4549-b959-932f355dda89"
+            Id="329a0ab0-7db2-45ea-b034-1e42ca68ced9"
             isDerived="false"
             sourceEndRoleName="Game"
             targetEndRoleName="UserInterface"
@@ -257,7 +257,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="d4de7071-4d9c-4d70-97de-2d90d47ef6e3"
+                  Id="a55a97d2-5346-4837-a756-6ae361d0506a"
                   name="Game"
                   isLeaf="false"
                   isStatic="false"
@@ -270,7 +270,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7a7db719-01af-45c9-9684-cfaf776e91be"
+                  Id="b2b0a329-c632-47ee-820a-ba082aaabf68"
                   name="UserInterface"
                   isLeaf="false"
                   isStatic="false"
@@ -982,6 +982,13 @@
             <classMoniker
               Id="71104951-5cd0-45eb-bae6-3a2095798eb9"
               LastKnownName="Player"
+              LastKnownLocation="LemonadeStandClassDiagram.uml" />
+          </dependency>
+          <dependency
+            Id="7a64f14e-b9d9-4891-8ea6-ce85a0da23d8">
+            <classMoniker
+              Id="f53a1ddc-562d-4f1a-bca9-fef8b368e6c5"
+              LastKnownName="Day"
               LastKnownLocation="LemonadeStandClassDiagram.uml" />
           </dependency>
         </suppliersInternal>
