@@ -113,7 +113,7 @@ namespace LemonadeStand
                 Console.WriteLine("Results: ");
                 Console.WriteLine($"Your business lasted until day {player1.Store.DaysOpen} out of {day}.");
                 Console.WriteLine("Starting Money: $500");
-                Console.WriteLine($"Ending Money: {player1.Store.Money}");
+                Console.WriteLine($"Ending Money: ${player1.Store.Money}");
                 Console.WriteLine($"Final Score: {player1.Store.Money}");
                 Console.WriteLine();
                 Console.WriteLine("Thanks for playing!");
