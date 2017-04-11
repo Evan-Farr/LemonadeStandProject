@@ -31,7 +31,7 @@ namespace LemonadeStand
             sales = 0;
         }
 
-        private void SetPotentialCustomers()
+        public void SetPotentialCustomers()
         {
             if(todaysWeather.LemonadeDemand == "low")
             {

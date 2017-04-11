@@ -37,6 +37,50 @@ namespace LemonadeStandTestProject
         }
 
         [TestMethod]
+        public void Inventory_AddSugar()
+        {
+            //Arrange
+            int amount = 10;
+            int result;
+            Inventory inventory = new Inventory();
+            inventory.AddSugar(amount);
+            //Act
+            result = 10;
+            //Assert
+            Assert.AreEqual(result, inventory.Sugar);
+        }
+
+        [TestMethod]
+        public void Inventory_RemoveSugar()
+        {
+            //Arrange
+            Inventory inventory = new Inventory();
+            inventory.AddSugar(20);
+            int amount = 20;
+            int result;
+            inventory.RemoveSugar(amount);
+            //Act
+            result = 0;
+            //Assert
+            Assert.AreEqual(result, inventory.Sugar);
+        }
+
+        [TestMethod]
+        public void Inventory_RemoveCups_False()
+        {
+            //Arrange
+            Inventory inventory = new Inventory();
+            inventory.AddCups(5);
+            int amount = 7;
+            bool result;
+            inventory.RemoveCups(amount);
+            //Act
+            result = false;
+            //Assert
+            Assert.AreEqual(result, inventory.RemoveCups(amount));
+        }
+
+        [TestMethod]
         public void Weather_DetermineDemand()
         {
             //Arrange
@@ -52,7 +96,7 @@ namespace LemonadeStandTestProject
         }
 
         [TestMethod]
-        public void Store_CalculateRunningProfitLoss()
+        public void Store_CalculateRunningProfitLoss_Over500()
         {
             //Arrange
             Random random = new Random();
@@ -61,6 +105,22 @@ namespace LemonadeStandTestProject
             double dailySales = 100;
             store.Money = 600;
             double result = 200; 
+            //Act
+            store.CalculateRunningProfitLoss(dailySales);
+            //Assert
+            Assert.AreEqual(result, store.RunningProfitLoss);
+        }
+
+        [TestMethod]
+        public void Store_CalculateRunningProfitLoss_LessThan500()
+        {
+            //Arrange
+            Random random = new Random();
+            Player player = new Player("hank", random);
+            Store store = new Store(random, player);
+            double dailySales = 100;
+            store.Money = 300;
+            double result = 200;
             //Act
             store.CalculateRunningProfitLoss(dailySales);
             //Assert
@@ -100,14 +160,44 @@ namespace LemonadeStandTestProject
         }
 
         [TestMethod]
-        public void ()
+        public void Weather_GetSkyCover()
         {
             //Arrange
-            
+            Random random = new Random();
+            Weather weather = new Weather(random);
+            string skyCover = "sunny";
             //Act
-            
+            weather.GetSkyCover();
             //Assert
-            Assert.
+            Assert.AreEqual(skyCover, weather.SkyCover);
+        }
+
+        [TestMethod]
+        public void Weather_GetTemperature()
+        {
+            //Arrange
+            Random random = new Random();
+            Weather weather = new Weather(random);
+            string temperature = "hot";
+            //Act
+            weather.GetTemperature();
+            //Assert
+            Assert.AreEqual(temperature, weather.Temperature);
+        }
+
+        [TestMethod]
+        public void Day_SetPotentialCustomers()
+        {
+            //Arrange
+            Random random = new Random();
+            Day day = new Day(random);
+            Weather weather = new Weather(random);
+            weather.LemonadeDemand = "high";
+            int result = 151;
+            //Act
+            day.SetPotentialCustomers();
+            //Assert
+            Assert.AreEqual(result, day.PotentialCustomers.Count);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace LemonadeStand
 
         public string SkyCover { get { return skyCover; } }
         public string Temperature { get { return temperature; } }
-        public string LemonadeDemand { get { return lemonadeDemand; } }
+        public string LemonadeDemand { get { return lemonadeDemand; } set { lemonadeDemand = value; } }
 
         public Weather(Random Random)
         {
@@ -61,7 +61,7 @@ namespace LemonadeStand
         {
             int randomTemperature = random.Next(11);
 
-            if (randomTemperature >= 0 && randomTemperature <= 2)
+            if (randomTemperature >= 0 && randomTemperature <= 4)
             {
                 temperature = "hot";
             }
