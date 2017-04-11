@@ -18,7 +18,7 @@ namespace LemonadeStandTestProject
             //Act
             result = 3;
             //Assert
-            Assert.AreEqual(inventory.Lemons, result);
+            Assert.AreEqual(result, inventory.Lemons);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace LemonadeStandTestProject
             //Act
             result = 0;
             //Assert
-            Assert.AreEqual(inventory.Lemons, result);
+            Assert.AreEqual(result, inventory.Lemons);
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace LemonadeStandTestProject
             //Act
             weather.DetermineDemand(skyCover, temperature);
             //Assert
-            Assert.AreEqual(weather.LemonadeDemand, result);
+            Assert.AreEqual(result, weather.LemonadeDemand);
         }
 
         [TestMethod]
@@ -64,7 +64,7 @@ namespace LemonadeStandTestProject
             //Act
             store.CalculateRunningProfitLoss(dailySales);
             //Assert
-            Assert.AreEqual(store.RunningProfitLoss, result);
+            Assert.AreEqual(result, store.RunningProfitLoss);
         }
 
         [TestMethod]
@@ -80,7 +80,7 @@ namespace LemonadeStandTestProject
             //Act
             store.UpdateMoney(sales);
             //Assert
-            Assert.AreEqual(store.Money, result);
+            Assert.AreEqual(result, store.Money);
         }
 
         [TestMethod]
@@ -96,9 +96,18 @@ namespace LemonadeStandTestProject
             //Act
             store.CalculateDailyProfitLoss(dailySales);
             //Assert
-            Assert.AreEqual(store.DailyProfitLoss, result);
+            Assert.AreEqual(result, store.DailyProfitLoss);
         }
 
-
+        [TestMethod]
+        public void ()
+        {
+            //Arrange
+            
+            //Act
+            
+            //Assert
+            Assert.
+        }
     }
 }
